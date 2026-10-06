@@ -1,23 +1,17 @@
 <div align="center">
 
-```
- 0100111 01 00110 1101001 010 1 011011 0010111 01001 10 1101 0 01110 100
-  ████ █   █  ███  ████  █     █████ █████ █████
- █     █   █ █   █ █   █ █       █   █       █
-  ███  █████ █   █ ████  █       █   ████    █
-     █ █   █ █   █ █     █       █   █       █
- ████  █   █  ███  █     █████ █████ █       █
-
- ▓▒░ store extraction & relocation suite  v1.337 ░▒▓
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/banner-dark.png">
+  <img src="docs/assets/banner-light.png" alt="SHOPLIFT: store extraction and relocation suite" width="520">
+</picture>
 
 **A WordPress-to-Shopify migration pipeline.** It is config-driven, resumable, and auditable.
 
 ![Node](https://img.shields.io/badge/node-%E2%89%A5%2020-5FA04E?logo=node.js&logoColor=white)
 ![Runtime dependencies](https://img.shields.io/badge/runtime%20deps-0-00C250)
 ![Shopify Admin API](https://img.shields.io/badge/Shopify%20Admin%20API-2026--07%20GraphQL-95BF47?logo=shopify&logoColor=white)
-![Offline tests](https://img.shields.io/badge/offline%20tests-1320%20assertions-00C250)
-![Licence](https://img.shields.io/badge/licence-MIT-6E7681)
+![Offline tests](https://img.shields.io/badge/offline%20tests-passing-00C250)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 </div>
 
@@ -142,7 +136,7 @@ src/transform/           raw → Shopify GraphQL inputs (pure, offline, warnings
 src/shopify/             GraphQL client (throttle-aware), mutations, bulk-operation flow
 src/import/              per-entity importers in dependency order
 src/stages/verify.js     post-import reconciliation
-fixtures/ + test/        6 offline test suites, 1320 assertions total: npm test
+fixtures/ + test/        offline test suites, no store needed: npm test
                           (132 fixtures + 71 import-sim + 180 machine
                           + 243 MCP + 630 dandomain + 64 probe-kit)
 ```

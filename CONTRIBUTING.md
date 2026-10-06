@@ -46,7 +46,7 @@ access) before you run a stage.
 ## Testing
 
 ```bash
-npm test                          # 6 suites, 1320 assertions total, no store needed
+npm test                          # offline suites, no store needed
 node test/run-fixtures.js         # fixture adapter -> export -> transform, mapping edge cases, field limits (132)
 node test/run-import-sim.js       # mock Shopify: idempotency, throttling, deferred retries, redirect skip, ledger write batching, P4/P6 flag-gated importers (71)
 node test/run-machine.js          # --json envelopes, exit codes, stdout purity, wipe + sites gates, plugin data-loss scan, TTY menu seed/export copy (180)
