@@ -1,0 +1,72 @@
+[
+  {
+    "id": 2001,
+    "slug": "guide-til-keramikpleje",
+    "link": "https://www.example-shop.com/blog/guide-til-keramikpleje/",
+    "status": "publish",
+    "date_gmt": "2025-09-01T07:00:00",
+    "title": {
+      "rendered": "Guide til keramikpleje"
+    },
+    "excerpt": {
+      "rendered": "<p>Sådan passer du på din keramik.</p>"
+    },
+    "content": {
+      "rendered": "<!-- wp:paragraph --><p>Vask i hånden. Se vores <a href=\"https://www.example-shop.com/produkt/kaffekop-keramik/\">kaffekop</a>.</p><!-- /wp:paragraph --><img src=\"https://www.example-shop.com/wp-content/uploads/keramik.jpg\" alt=\"\">"
+    },
+    "yoast_head_json": {
+      "title": "Keramikpleje – den komplette guide",
+      "description": "Lær at pleje håndlavet keramik."
+    },
+    "_embedded": {
+      "author": [
+        {
+          "name": "Test Author"
+        }
+      ],
+      "wp:term": [
+        [
+          {
+            "taxonomy": "category",
+            "name": "Guides"
+          }
+        ],
+        [
+          {
+            "taxonomy": "post_tag",
+            "name": "keramik"
+          }
+        ]
+      ],
+      "wp:featuredmedia": [
+        {
+          "source_url": "https://www.example-shop.com/wp-content/uploads/keramik-hero.jpg",
+          "alt_text": "Keramik"
+        }
+      ]
+    }
+  },
+  {
+    "id": 2002,
+    "slug": "nyt-fra-vaerkstedet-2018",
+    "link": "https://www.example-shop.com/blog/nyt-fra-vaerkstedet-2018/",
+    "status": "publish",
+    "date_gmt": "2018-03-10T09:00:00",
+    "title": {
+      "rendered": "Nyt fra værkstedet (2018)"
+    },
+    "excerpt": {
+      "rendered": ""
+    },
+    "content": {
+      "rendered": "<p class=\"MsoNormal\" style=\"mso-margin-bottom-alt:auto\"><span style=\"mso-fareast-font-family:&quot;Times New Roman&quot;\">Vi er flyttet i nyt værksted!</span></p><p>Læs <a href=\"https://www.example-shop.com/?p=42\">det gamle indlæg</a> og <a href=\"https://www.example-shop.com/?page_id=7\">siden om holdet</a>.</p>"
+    },
+    "_embedded": {
+      "author": [
+        {
+          "name": "Test Author"
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,283 @@
+{
+  "provenance": "RECORDED: gaps.json sections.variants.sample + audit.returned + perProduct. Naive-parser collapse (three variant records became one object truncated before VariantTypeValues). Not SOAP the adapter consumes — products.json stores the un-collapsed reconstruction.",
+  "responses": {},
+  "collapse": {
+    "sample": [
+      {
+        "item": [
+          {
+            "Id": "4",
+            "ProductId": "1",
+            "Stock": "10",
+            "StockLow": "0",
+            "Price": "199",
+            "BuyingPrice": "79",
+            "ItemNumber": "",
+            "ItemNumberSupplier": "",
+            "Weight": "0",
+            "DeliveryTimeId": "-1",
+            "Status": "true",
+            "DisableOnEmpty": "true",
+            "Discount": "49",
+            "DiscountType": "a",
+            "Ean": "",
+            "PictureId": "0",
+            "PictureIds": null,
+            "Sorting": "0"
+          },
+          {
+            "Id": "5",
+            "ProductId": "1",
+            "Stock": "10",
+            "StockLow": "0",
+            "Price": "199",
+            "BuyingPrice": "79",
+            "ItemNumber": "",
+            "ItemNumberSupplier": "",
+            "Weight": "0",
+            "DeliveryTimeId": "-1",
+            "Status": "true",
+            "DisableOnEmpty": "true",
+            "Discount": "49",
+            "DiscountType": "a",
+            "Ean": "",
+            "PictureId": "0",
+            "PictureIds": null,
+            "Sorting": "1"
+          },
+          {
+            "Id": "28",
+            "ProductId": "1",
+            "Stock": "10",
+            "StockLow": "0",
+            "Price": "199",
+            "BuyingPrice": "79",
+            "ItemNumber": "",
+            "ItemNumberSupplier": "",
+            "Weight": "0",
+            "DeliveryTimeId": "-1",
+            "Status": "true",
+            "DisableOnEmpty": "true",
+            "Discount": "49",
+            "DiscountType": "a",
+            "Ean": "",
+            "PictureId": "0",
+            "PictureIds": null,
+            "Sorting": "2"
+          }
+        ],
+        "MinAmount": [
+          "1",
+          "1",
+          "1"
+        ],
+        "Title": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "Unit": [
+          {
+            "Id": "1",
+            "LanguageISO": "DK",
+            "Title": "stk."
+          },
+          {
+            "Id": "1",
+            "LanguageISO": "DK",
+            "Title": "stk."
+          },
+          {
+            "Id": "1",
+            "LanguageISO": "DK",
+            "Title": "stk."
+          }
+        ],
+        "StockLocations": [
+          {
+            "StockLocationId": "1",
+            "DeliveryTimeId": "-2",
+            "Stock": "10",
+            "BuyPrice": "79"
+          },
+          [
+            {
+              "StockLocationId": "1",
+              "DeliveryTimeId": "-2",
+              "Stock": "10",
+              "BuyPrice": "79"
+            }
+          ],
+          [
+            {
+              "StockLocationId": "1",
+              "DeliveryTimeId": "-2",
+              "Stock": "10",
+              "BuyPrice": "79"
+            }
+          ]
+        ]
+      },
+      {
+        "item": [
+          {
+            "Id": "6",
+            "ProductId": "2",
+            "Stock": "5",
+            "StockLow": "0",
+            "Price": "199",
+            "BuyingPrice": "299",
+            "ItemNumber": "",
+            "ItemNumberSupplier": "",
+            "Weight": "0",
+            "DeliveryTimeId": "-1",
+            "Status": "true",
+            "DisableOnEmpty": "true",
+            "Discount": "49",
+            "DiscountType": "a",
+            "Ean": "",
+            "PictureId": "0",
+            "PictureIds": null,
+            "Sorting": "1"
+          },
+          {
+            "Id": "7",
+            "ProductId": "2",
+            "Stock": "5",
+            "StockLow": "0",
+            "Price": "199",
+            "BuyingPrice": "299",
+            "ItemNumber": "",
+            "ItemNumberSupplier": "",
+            "Weight": "0",
+            "DeliveryTimeId": "-1",
+            "Status": "true",
+            "DisableOnEmpty": "true",
+            "Discount": "49",
+            "DiscountType": "a",
+            "Ean": "",
+            "PictureId": "0",
+            "PictureIds": null,
+            "Sorting": "2"
+          },
+          {
+            "Id": "8",
+            "ProductId": "2",
+            "Stock": "5",
+            "StockLow": "0",
+            "Price": "199",
+            "BuyingPrice": "299",
+            "ItemNumber": "",
+            "ItemNumberSupplier": "",
+            "Weight": "0",
+            "DeliveryTimeId": "-1",
+            "Status": "true",
+            "DisableOnEmpty": "true",
+            "Discount": "49",
+            "DiscountType": "a",
+            "Ean": "",
+            "PictureId": "0",
+            "PictureIds": null,
+            "Sorting": "3"
+          }
+        ],
+        "MinAmount": [
+          "1",
+          "1",
+          "1"
+        ],
+        "Title": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "Unit": [
+          {
+            "Id": "1",
+            "LanguageISO": "DK",
+            "Title": "stk."
+          },
+          {
+            "Id": "1",
+            "LanguageISO": "DK",
+            "Title": "stk."
+          },
+          {
+            "Id": "1",
+            "LanguageISO": "DK",
+            "Title": "stk."
+          }
+        ],
+        "StockLocations": [
+          {
+            "StockLocationId": "1",
+            "DeliveryTimeId": "-2",
+            "Stock": "5",
+            "BuyPrice": "299"
+          },
+          [
+            {
+              "StockLocationId": "1",
+              "DeliveryTimeId": "-2",
+              "Stock": "5",
+              "BuyPrice": "299"
+            }
+          ],
+          [
+            {
+              "StockLocationId": "1",
+              "DeliveryTimeId": "-2",
+              "Stock": "5",
+              "BuyPrice": "299"
+            }
+          ]
+        ]
+      }
+    ],
+    "auditReturned": [
+      "item",
+      "MinAmount",
+      "Title",
+      "Unit",
+      "StockLocations"
+    ],
+    "perProduct": [
+      {
+        "productId": 1,
+        "ok": true,
+        "fault": null,
+        "count": 1
+      },
+      {
+        "productId": 2,
+        "ok": true,
+        "fault": null,
+        "count": 1
+      },
+      {
+        "productId": 3,
+        "ok": true,
+        "fault": null,
+        "count": 1
+      },
+      {
+        "productId": 4,
+        "ok": true,
+        "fault": null,
+        "count": 1
+      },
+      {
+        "productId": 5,
+        "ok": true,
+        "fault": null,
+        "count": 0
+      },
+      {
+        "productId": 6,
+        "ok": true,
+        "fault": null,
+        "count": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "source": {
+    "adapter": "woocommerce",
+    "baseUrl": "https://pin.example.com",
+    "woocommerce": {
+      "consumerKey": "${WC_CONSUMER_KEY}",
+      "consumerSecret": "${WC_CONSUMER_SECRET}",
+      "apiVersion": "wc/v3",
+      "perPage": 100,
+      "orderStatuses": [
+        "completed",
+        "processing",
+        "on-hold",
+        "refunded"
+      ],
+      "ordersAfter": null
+    },
+    "dandomain": {
+      "endpoint": "https://${DD_TENANT}.webshop.dandomain.dk/admin/webapi/endpoints/v1_1/ProductService.asmx",
+      "username": "${DD_API_USER}",
+      "password": "${DD_API_PASSWORD}",
+      "tenant": "${DD_TENANT}",
+      "lineBasis": "net",
+      "pageSize": 100,
+      "pageBase": null,
+      "statusMap": null,
+      "skipStatuses": null,
+      "skipInactiveCoupons": true,
+      "weightUnit": "kg",
+      "language": null,
+      "storefrontUrl": "https://${DD_TENANT}.mywebshop.io",
+      "mediaBase": null,
+      "pageFolderIds": null,
+      "throttle": {
+        "capacity": 1,
+        "refillPerSecond": 4
+      },
+      "timeoutMs": 60000
+    },
+    "wpContent": {
+      "enabled": true,
+      "includePosts": true,
+      "includePages": true,
+      "excludePageSlugs": [
+        "cart",
+        "checkout",
+        "my-account",
+        "shop",
+        "kurv",
+        "kasse",
+        "min-konto"
+      ],
+      "username": "${WP_APP_USER}",
+      "appPassword": "${WP_APP_PASSWORD}"
+    }
+  },
+  "shopify": {
+    "shop": "pin-target.myshopify.com",
+    "clientId": "${SHOPIFY_CLIENT_ID}",
+    "clientSecret": "${SHOPIFY_CLIENT_SECRET}",
+    "adminAccessToken": "",
+    "apiVersion": "2026-07",
+    "primaryLocationId": "",
+    "blog": {
+      "title": "News",
+      "handle": "news"
+    }
+  },
+  "entities": {
+    "products": true,
+    "collections": true,
+    "customers": true,
+    "orders": true,
+    "discounts": true,
+    "pages": true,
+    "articles": true,
+    "redirects": true
+  },
+  "options": {
+    "locale": "da",
+    "productStatus": "DRAFT",
+    "weightUnit": "KILOGRAMS",
+    "trackInventory": true,
+    "importImagesFrom": "source-url",
+    "productsBulkThreshold": 25,
+    "orders": {
+      "markFulfilledWhenComplete": true,
+      "importCancelled": false,
+      "tag": "wp-import"
+    },
+    "skipExpiredCoupons": true,
+    "stripShortcodes": true,
+    "rewriteInternalLinks": true,
+    "dryRun": false
+  },
+  "paths": {
+    "data": "./data/pin__pin-target"
+  }
+}

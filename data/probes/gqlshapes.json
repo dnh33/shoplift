@@ -1,0 +1,655 @@
+{
+  "public": {
+    "queries": [
+      {
+        "name": "apiLogsV2",
+        "returns": "ApiLogsV2Payload",
+        "args": [
+          "input:ApiLogsV2Input"
+        ]
+      },
+      {
+        "name": "currencies",
+        "returns": "CurrenciesPayload",
+        "args": [
+          "input:CurrenciesInput"
+        ]
+      },
+      {
+        "name": "currencyById",
+        "returns": "CurrencyByIdPayload",
+        "args": [
+          "input:CurrencyByIdInput"
+        ]
+      },
+      {
+        "name": "currencyCodes",
+        "returns": "CurrencyCodesPayload",
+        "args": []
+      },
+      {
+        "name": "discounts",
+        "returns": "DiscountsPayload",
+        "args": [
+          "input:DiscountsInput"
+        ]
+      },
+      {
+        "name": "discountById",
+        "returns": "DiscountByIdPayload",
+        "args": [
+          "input:DiscountByIdInput"
+        ]
+      },
+      {
+        "name": "generateDiscountCode",
+        "returns": "GenerateDiscountCodePayload",
+        "args": []
+      },
+      {
+        "name": "domains",
+        "returns": "DomainPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "search:DomainSearchInput",
+          "sorting:DomainSortingInput"
+        ]
+      },
+      {
+        "name": "llmsTxt",
+        "returns": "LlmsTxtPayload",
+        "args": []
+      },
+      {
+        "name": "robotsTxt",
+        "returns": "RobotsTxtPayload",
+        "args": []
+      },
+      {
+        "name": "giftCards",
+        "returns": "GiftCardsPayload",
+        "args": [
+          "input:GiftCardsInput"
+        ]
+      },
+      {
+        "name": "giftCardById",
+        "returns": "GiftCardByIdPayload",
+        "args": [
+          "input:GiftCardByIdInput"
+        ]
+      },
+      {
+        "name": "orders",
+        "returns": "OrderPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "search:OrderSearchInput",
+          "sorting:OrderSortingInput"
+        ]
+      },
+      {
+        "name": "orderById",
+        "returns": "Order",
+        "args": [
+          "id:ID"
+        ]
+      },
+      {
+        "name": "ordersByCustomerEmail",
+        "returns": "OrdersByCustomerEmailPayload",
+        "args": [
+          "input:OrdersByCustomerEmailInput"
+        ]
+      },
+      {
+        "name": "orderStatuses",
+        "returns": "NON_NULL",
+        "args": []
+      },
+      {
+        "name": "invoices",
+        "returns": "OrderInvoicePagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "search:OrderInvoiceSearchInput",
+          "sorting:OrderInvoiceSortingInput"
+        ]
+      },
+      {
+        "name": "paymentMethods",
+        "returns": "PaymentMethodsPayload",
+        "args": []
+      },
+      {
+        "name": "productCategories",
+        "returns": "ProductCategoriesPayload",
+        "args": [
+          "input:ProductCategoriesInput"
+        ]
+      },
+      {
+        "name": "productCategoryTree",
+        "returns": "ProductCategoryTreePayload",
+        "args": [
+          "input:ProductCategoryTreeInput"
+        ]
+      },
+      {
+        "name": "redirects",
+        "returns": "RedirectsPayload",
+        "args": [
+          "input:RedirectsInput"
+        ]
+      },
+      {
+        "name": "redirectById",
+        "returns": "RedirectByIdPayload",
+        "args": [
+          "input:RedirectByIdInput"
+        ]
+      },
+      {
+        "name": "unitById",
+        "returns": "UnitByIdPayload",
+        "args": [
+          "input:UnitByIdInput"
+        ]
+      },
+      {
+        "name": "units",
+        "returns": "UnitsPayload",
+        "args": [
+          "input:UnitsInput"
+        ]
+      }
+    ],
+    "payloads": {
+      "giftCards": {
+        "payloadType": "GiftCardsPayload",
+        "fields": [
+          "content:GiftCardPagination",
+          "errors:NON_NULL"
+        ]
+      },
+      "redirects": {
+        "payloadType": "RedirectsPayload",
+        "fields": [
+          "content:RedirectPagination",
+          "errors:NON_NULL"
+        ]
+      },
+      "orders": {
+        "payloadType": "OrderPagination",
+        "fields": [
+          "pagination:PaginationData",
+          "data:NON_NULL"
+        ]
+      },
+      "discounts": {
+        "payloadType": "DiscountsPayload",
+        "fields": [
+          "content:DiscountPagination",
+          "errors:NON_NULL"
+        ]
+      },
+      "productCategories": {
+        "payloadType": "ProductCategoriesPayload",
+        "fields": [
+          "content:ProductCategory",
+          "errors:NON_NULL"
+        ]
+      },
+      "invoices": {
+        "payloadType": "OrderInvoicePagination",
+        "fields": [
+          "pagination:PaginationData",
+          "data:NON_NULL"
+        ]
+      }
+    }
+  },
+  "experimental": {
+    "queries": [
+      {
+        "name": "webhookActivity",
+        "returns": "WebhookActivity",
+        "args": [
+          "webhookId:ID",
+          "period:DateTimeRangeInput"
+        ]
+      },
+      {
+        "name": "webhookAttempts",
+        "returns": "WebhookAttemptsGroupPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "sorting:WebhookAttemptsGroupSorting",
+          "search:WebhookAttemptsGroupSearch",
+          "filters:WebhookAttemptsGroupSearch"
+        ]
+      },
+      {
+        "name": "webhookEvents",
+        "returns": "NON_NULL",
+        "args": []
+      },
+      {
+        "name": "webhookLogs",
+        "returns": "WebhookLogEntryPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "sorting:WebhookLogEntrySorting",
+          "search:WebhookLogEntrySearch"
+        ]
+      },
+      {
+        "name": "webhooks",
+        "returns": "WebhookPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "sorting:WebhookSortingInput",
+          "search:WebhookSearch"
+        ]
+      },
+      {
+        "name": "webhooksHashKey",
+        "returns": "String",
+        "args": []
+      },
+      {
+        "name": "apiLogsV2",
+        "returns": "ApiLogsV2Payload",
+        "args": [
+          "input:ApiLogsV2Input"
+        ]
+      },
+      {
+        "name": "blogPosts",
+        "returns": "BlogPostsPayload",
+        "args": [
+          "input:BlogPostsInput"
+        ]
+      },
+      {
+        "name": "blogPostById",
+        "returns": "BlogPostByIdPayload",
+        "args": [
+          "input:BlogPostByIdInput"
+        ]
+      },
+      {
+        "name": "blogCategories",
+        "returns": "BlogCategoriesPayload",
+        "args": [
+          "input:BlogCategoriesInput"
+        ]
+      },
+      {
+        "name": "blogComments",
+        "returns": "BlogCommentsPayload",
+        "args": [
+          "input:BlogCommentsInput"
+        ]
+      },
+      {
+        "name": "currencies",
+        "returns": "CurrenciesPayload",
+        "args": [
+          "input:CurrenciesInput"
+        ]
+      },
+      {
+        "name": "currencyById",
+        "returns": "CurrencyByIdPayload",
+        "args": [
+          "input:CurrencyByIdInput"
+        ]
+      },
+      {
+        "name": "currencyCodes",
+        "returns": "CurrencyCodesPayload",
+        "args": []
+      },
+      {
+        "name": "deliveryMethods",
+        "returns": "DeliveryMethodsPayload",
+        "args": []
+      },
+      {
+        "name": "deliveryMethodById",
+        "returns": "DeliveryMethodByIdPayload",
+        "args": [
+          "input:DeliveryMethodByIdInput"
+        ]
+      },
+      {
+        "name": "deliveryCountries",
+        "returns": "DeliveryCountriesPayload",
+        "args": [
+          "input:DeliveryCountriesInput"
+        ]
+      },
+      {
+        "name": "deliveryCountryById",
+        "returns": "DeliveryCountryByIdPayload",
+        "args": [
+          "input:DeliveryCountryByIdInput"
+        ]
+      },
+      {
+        "name": "couriers",
+        "returns": "CouriersPayload",
+        "args": []
+      },
+      {
+        "name": "domains",
+        "returns": "DomainPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "search:DomainSearchInput",
+          "sorting:DomainSortingInput"
+        ]
+      },
+      {
+        "name": "llmsTxt",
+        "returns": "LlmsTxtPayload",
+        "args": []
+      },
+      {
+        "name": "robotsTxt",
+        "returns": "RobotsTxtPayload",
+        "args": []
+      },
+      {
+        "name": "languages",
+        "returns": "LanguagesPayload",
+        "args": [
+          "input:LanguagesInput"
+        ]
+      },
+      {
+        "name": "displayLanguageById",
+        "returns": "DisplayLanguageByIdPayload",
+        "args": [
+          "input:DisplayLanguageByIdInput"
+        ]
+      },
+      {
+        "name": "languagesV2",
+        "returns": "LanguagesV2Payload",
+        "args": [
+          "input:LanguagesV2Input"
+        ]
+      },
+      {
+        "name": "languageById",
+        "returns": "LanguageByIdPayload",
+        "args": [
+          "input:LanguageByIdInput"
+        ]
+      },
+      {
+        "name": "invoices",
+        "returns": "OrderInvoicePagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "search:OrderInvoiceSearchInput",
+          "sorting:OrderInvoiceSortingInput"
+        ]
+      },
+      {
+        "name": "orderById",
+        "returns": "Order",
+        "args": [
+          "id:ID"
+        ]
+      },
+      {
+        "name": "orderStatuses",
+        "returns": "NON_NULL",
+        "args": []
+      },
+      {
+        "name": "orders",
+        "returns": "OrderPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "search:OrderSearchInput",
+          "sorting:OrderSortingInput"
+        ]
+      },
+      {
+        "name": "ordersByCustomerEmail",
+        "returns": "OrdersByCustomerEmailPayload",
+        "args": [
+          "input:OrdersByCustomerEmailInput"
+        ]
+      },
+      {
+        "name": "pages",
+        "returns": "PagesPayload",
+        "args": [
+          "input:PagesInput"
+        ]
+      },
+      {
+        "name": "pageById",
+        "returns": "PageByIdPayload",
+        "args": [
+          "input:PageByIdInput"
+        ]
+      },
+      {
+        "name": "pageTypes",
+        "returns": "PageTypesPayload",
+        "args": []
+      },
+      {
+        "name": "folders",
+        "returns": "FoldersPayload",
+        "args": [
+          "input:FoldersInput"
+        ]
+      },
+      {
+        "name": "folderById",
+        "returns": "FolderByIdPayload",
+        "args": [
+          "input:FolderByIdInput"
+        ]
+      },
+      {
+        "name": "paymentMethods",
+        "returns": "PaymentMethodsPayload",
+        "args": []
+      },
+      {
+        "name": "productCategories",
+        "returns": "ProductCategoriesPayload",
+        "args": [
+          "input:ProductCategoriesInput"
+        ]
+      },
+      {
+        "name": "productCategoryById",
+        "returns": "ProductCategory",
+        "args": [
+          "id:ID"
+        ]
+      },
+      {
+        "name": "redirectById",
+        "returns": "RedirectByIdPayload",
+        "args": [
+          "input:RedirectByIdInput"
+        ]
+      },
+      {
+        "name": "redirects",
+        "returns": "RedirectsPayload",
+        "args": [
+          "input:RedirectsInput"
+        ]
+      },
+      {
+        "name": "sites",
+        "returns": "SitesPayload",
+        "args": [
+          "input:SitesInput"
+        ]
+      },
+      {
+        "name": "statisticsCustomers",
+        "returns": "CustomerStatistics",
+        "args": [
+          "range:DateTimeRangeInput",
+          "groupBy:StatisticsGrouping",
+          "stat:CustomerStatisticsType",
+          "sites:ID"
+        ]
+      },
+      {
+        "name": "statisticsDeliveryMethods",
+        "returns": "StatisticsDeliveryMethodsPayload",
+        "args": [
+          "input:StatisticsDeliveryMethodsInput"
+        ]
+      },
+      {
+        "name": "statisticsOrdersV2",
+        "returns": "StatisticsOrdersV2Payload",
+        "args": [
+          "input:StatisticsOrdersV2Input"
+        ]
+      },
+      {
+        "name": "statisticsPaymentMethods",
+        "returns": "StatisticsPaymentMethodsPayload",
+        "args": [
+          "input:StatisticsPaymentMethodsInput"
+        ]
+      },
+      {
+        "name": "statisticsTopProducts",
+        "returns": "TopProductStatistics",
+        "args": [
+          "range:DateTimeRangeInput",
+          "limit:Int",
+          "sites:ID"
+        ]
+      },
+      {
+        "name": "reportsCustomers",
+        "returns": "ReportsCustomersPayload",
+        "args": [
+          "input:ReportsCustomersInput"
+        ]
+      },
+      {
+        "name": "reportsProductsV2",
+        "returns": "ReportsProductsV2Payload",
+        "args": [
+          "input:ReportsProductsV2Input"
+        ]
+      },
+      {
+        "name": "unitById",
+        "returns": "UnitByIdPayload",
+        "args": [
+          "input:UnitByIdInput"
+        ]
+      },
+      {
+        "name": "units",
+        "returns": "UnitsPayload",
+        "args": [
+          "input:UnitsInput"
+        ]
+      },
+      {
+        "name": "users",
+        "returns": "UserPagination",
+        "args": [
+          "pagination:PaginationOptions",
+          "search:UserSearchInput",
+          "sorting:UserSortingInput"
+        ]
+      },
+      {
+        "name": "userGroupsV2",
+        "returns": "UserGroupV2",
+        "args": []
+      }
+    ],
+    "payloads": {
+      "redirects": {
+        "payloadType": "RedirectsPayload",
+        "fields": [
+          "content:RedirectPagination",
+          "errors:NON_NULL"
+        ]
+      },
+      "blogPosts": {
+        "payloadType": "BlogPostsPayload",
+        "fields": [
+          "content:BlogPostPagination",
+          "errors:NON_NULL"
+        ]
+      },
+      "orders": {
+        "payloadType": "OrderPagination",
+        "fields": [
+          "pagination:PaginationData",
+          "data:NON_NULL"
+        ]
+      },
+      "users": {
+        "payloadType": "UserPagination",
+        "fields": [
+          "pagination:PaginationData",
+          "data:NON_NULL"
+        ]
+      },
+      "pages": {
+        "payloadType": "PagesPayload",
+        "fields": [
+          "content:Page",
+          "errors:NON_NULL"
+        ]
+      },
+      "productCategories": {
+        "payloadType": "ProductCategoriesPayload",
+        "fields": [
+          "content:ProductCategory",
+          "errors:NON_NULL"
+        ]
+      },
+      "invoices": {
+        "payloadType": "OrderInvoicePagination",
+        "fields": [
+          "pagination:PaginationData",
+          "data:NON_NULL"
+        ]
+      }
+    }
+  },
+  "orderInvoiceType": {
+    "fields": [
+      "id:ID",
+      "createdAt:DateTime",
+      "dueAt:DateTime",
+      "isPaid:Boolean",
+      "order:Order"
+    ]
+  },
+  "transactionEventType": {
+    "fields": [
+      "id:ID",
+      "amount:Float",
+      "type:TransactionEventType",
+      "createdAt:DateTime"
+    ]
+  },
+  "interpret": "args per query tell the client how to paginate/filter each entity; payload fields tell it where the rows live. Written because the documented pagination shape is not universal."
+}

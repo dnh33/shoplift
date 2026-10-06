@@ -1,0 +1,259 @@
+[
+  {
+    "id": 9001,
+    "number": "9001",
+    "status": "completed",
+    "currency": "DKK",
+    "date_created_gmt": "2025-11-14T09:30:00",
+    "date_paid_gmt": "2025-11-14T09:31:12",
+    "total": "348.00",
+    "total_tax": "69.60",
+    "shipping_total": "49.00",
+    "discount_total": "30.00",
+    "payment_method": "quickpay",
+    "payment_method_title": "Kreditkort (QuickPay)",
+    "customer_id": 501,
+    "customer_note": "Ring ved levering",
+    "billing": {
+      "first_name": "Mette",
+      "last_name": "Hansen",
+      "address_1": "Nørregade 12",
+      "city": "København",
+      "postcode": "1165",
+      "country": "DK",
+      "email": "mette@example.dk",
+      "phone": "+4520123456"
+    },
+    "shipping": {
+      "first_name": "Mette",
+      "last_name": "Hansen",
+      "address_1": "Nørregade 12",
+      "city": "København",
+      "postcode": "1165",
+      "country": "DK"
+    },
+    "line_items": [
+      {
+        "id": 1,
+        "name": "Kaffekop i keramik",
+        "product_id": 101,
+        "variation_id": 0,
+        "quantity": 2,
+        "sku": "CUP-001",
+        "subtotal": "258.00",
+        "total": "228.00",
+        "taxes": [
+          {
+            "id": 1,
+            "total": "57.00"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": "T-shirt Basic - S, Sort",
+        "product_id": 102,
+        "variation_id": 1021,
+        "quantity": 1,
+        "sku": "TS-S-SORT",
+        "subtotal": "71.00",
+        "total": "71.00",
+        "taxes": []
+      }
+    ],
+    "shipping_lines": [
+      {
+        "id": 3,
+        "method_title": "GLS Pakkeshop",
+        "total": "49.00"
+      }
+    ],
+    "tax_lines": [
+      {
+        "rate_id": 1,
+        "label": "Moms",
+        "rate_percent": 25
+      }
+    ],
+    "coupon_lines": [
+      {
+        "code": "VELKOMMEN10"
+      },
+      {
+        "code": "FRIFRAGT"
+      }
+    ],
+    "meta_data": []
+  },
+  {
+    "id": 9002,
+    "number": "9002",
+    "status": "refunded",
+    "currency": "DKK",
+    "date_created_gmt": "2025-12-02T13:00:00",
+    "date_paid_gmt": "2025-12-02T13:02:00",
+    "total": "179.00",
+    "total_tax": "35.80",
+    "shipping_total": "0.00",
+    "discount_total": "0.00",
+    "payment_method": "mobilepay",
+    "payment_method_title": "MobilePay",
+    "customer_id": 0,
+    "billing": {
+      "first_name": "Jens",
+      "last_name": "Jensen",
+      "address_1": "Vestergade 3",
+      "city": "Aarhus",
+      "postcode": "8000",
+      "country": "DK",
+      "email": "jens@example.dk"
+    },
+    "shipping": {},
+    "line_items": [
+      {
+        "id": 4,
+        "name": "Kaffekop i keramik",
+        "product_id": 101,
+        "variation_id": 0,
+        "quantity": 1,
+        "sku": "CUP-001",
+        "subtotal": "179.00",
+        "total": "179.00",
+        "taxes": []
+      }
+    ],
+    "shipping_lines": [],
+    "tax_lines": [],
+    "coupon_lines": [],
+    "fee_lines": [
+      {
+        "id": 9,
+        "name": "Gaveindpakning",
+        "total": "25.00"
+      },
+      {
+        "id": 10,
+        "name": "Rabat (manuel)",
+        "total": "-10.00"
+      }
+    ],
+    "meta_data": []
+  },
+  {
+    "id": 9003,
+    "number": "9003",
+    "status": "processing",
+    "currency": "DKK",
+    "date_created_gmt": "2026-01-20T10:00:00",
+    "date_paid_gmt": "2026-01-20T10:01:30",
+    "total": "449.00",
+    "total_tax": "89.80",
+    "shipping_total": "45.00",
+    "discount_total": "0.00",
+    "payment_method": "mobilepay",
+    "payment_method_title": "MobilePay",
+    "customer_id": 501,
+    "billing": {
+      "first_name": "Mette",
+      "last_name": "Hansen",
+      "address_1": "Nørregade 12",
+      "city": "København",
+      "postcode": "1165",
+      "country": "DK",
+      "email": "mette@example.dk"
+    },
+    "shipping": {
+      "first_name": "Mette",
+      "last_name": "Hansen",
+      "address_1": "Nørregade 12",
+      "city": "København",
+      "postcode": "1165",
+      "country": "DK"
+    },
+    "line_items": [
+      {
+        "id": 11,
+        "name": "Plaid & Pude Øko",
+        "product_id": 104,
+        "variation_id": 0,
+        "quantity": 2,
+        "sku": "PLAID-OKO-1",
+        "subtotal": "404.00",
+        "total": "404.00",
+        "taxes": []
+      }
+    ],
+    "shipping_lines": [
+      {
+        "id": 12,
+        "method_title": "PostNord Privat",
+        "total": "45.00"
+      }
+    ],
+    "tax_lines": [],
+    "coupon_lines": [],
+    "refunds": [
+      {
+        "id": 77,
+        "reason": "Reklamation — én pude retur",
+        "total": "-100.00"
+      }
+    ],
+    "meta_data": []
+  },
+  {
+    "id": 9004,
+    "number": "9004",
+    "status": "completed",
+    "currency": "EUR",
+    "date_created_gmt": "2026-02-11T08:30:00",
+    "date_paid_gmt": "2026-02-11T08:31:00",
+    "total": "46.00",
+    "total_tax": "9.20",
+    "shipping_total": "6.00",
+    "discount_total": "0.00",
+    "payment_method": "quickpay",
+    "payment_method_title": "Kreditkort (QuickPay)",
+    "customer_id": 0,
+    "billing": {
+      "first_name": "Greta",
+      "last_name": "Schmidt",
+      "address_1": "Hafenstraße 8",
+      "city": "Flensburg",
+      "postcode": "24937",
+      "country": "DE",
+      "email": "greta@example.de"
+    },
+    "shipping": {
+      "first_name": "Greta",
+      "last_name": "Schmidt",
+      "address_1": "Hafenstraße 8",
+      "city": "Flensburg",
+      "postcode": "24937",
+      "country": "DE"
+    },
+    "line_items": [
+      {
+        "id": 13,
+        "name": "Kaffekop i keramik",
+        "product_id": 101,
+        "variation_id": 0,
+        "quantity": 2,
+        "sku": "CUP-001",
+        "subtotal": "40.00",
+        "total": "40.00",
+        "taxes": []
+      }
+    ],
+    "shipping_lines": [
+      {
+        "id": 14,
+        "method_title": "DHL",
+        "total": "6.00"
+      }
+    ],
+    "tax_lines": [],
+    "coupon_lines": [],
+    "meta_data": []
+  }
+]

@@ -1,0 +1,59 @@
+{
+  "provenance": "RECORDED: scale.json catalogueSize + pages[].parsedLength / itemTagsIncludingNested / productMarkers. Every recorded page collapsed to parsedLength 1. The 618-product SOAP is not stored — only the collapse counts.",
+  "responses": {},
+  "collapse": {
+    "catalogueSize": 618,
+    "pages": [
+      {
+        "pageSize": 50,
+        "parsedLength": 1,
+        "itemTagsIncludingNested": 124,
+        "productMarkers": {
+          "VatGroupId": 50,
+          "SeoLink": 8,
+          "Online": 50
+        }
+      },
+      {
+        "pageSize": 100,
+        "parsedLength": 1,
+        "itemTagsIncludingNested": 224,
+        "productMarkers": {
+          "VatGroupId": 100,
+          "SeoLink": 8,
+          "Online": 100
+        }
+      },
+      {
+        "pageSize": 250,
+        "parsedLength": 1,
+        "itemTagsIncludingNested": 524,
+        "productMarkers": {
+          "VatGroupId": 250,
+          "SeoLink": 8,
+          "Online": 250
+        }
+      },
+      {
+        "pageSize": 500,
+        "parsedLength": 1,
+        "itemTagsIncludingNested": 1024,
+        "productMarkers": {
+          "VatGroupId": 500,
+          "SeoLink": 8,
+          "Online": 500
+        }
+      },
+      {
+        "pageSize": 1000,
+        "parsedLength": 1,
+        "itemTagsIncludingNested": 1260,
+        "productMarkers": {
+          "VatGroupId": 618,
+          "SeoLink": 8,
+          "Online": 618
+        }
+      }
+    ]
+  }
+}

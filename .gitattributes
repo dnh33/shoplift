@@ -1,0 +1,19 @@
+# Normalize line endings: LF in the repo, native in the working tree.
+* text=auto eol=lf
+
+# Shell-ish entry points must stay LF or the shebang breaks on POSIX.
+*.js   text eol=lf
+*.mjs  text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.toml text eol=lf
+
+# Test fixtures are data, not source — keep them out of language stats and
+# collapsed in diffs (they are regenerated wholesale, never hand-edited line by line).
+fixtures/**  linguist-generated=true
+*.jsonl      -diff
+
+# Docs carry real weight here (PLAYBOOK is the deliverable half of the tool),
+# so don't let GitHub call this a Markdown project.
+*.md linguist-documentation=true

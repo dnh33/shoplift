@@ -1,0 +1,117 @@
+{
+  "source": "data/probes/gqldeep.json",
+  "recordedAt": "2026-08-18",
+  "probe": "gqldeep",
+  "write": false,
+  "blogPostType": {
+    "name": "BlogPost",
+    "fields": [
+      "id:ID",
+      "addedBy:String",
+      "createdAt:DateTime",
+      "pageId:Int",
+      "categoryIds:NON_NULL",
+      "categories:BlogCategory",
+      "comments:BlogComment",
+      "images:BlogPostImage",
+      "displayInterval:BlogDisplayInterval",
+      "translations:NON_NULL"
+    ]
+  },
+  "blogPostsQuery": {
+    "status": 200,
+    "data": {
+      "blogPosts": {
+        "content": {
+          "data": [{ "__typename": "BlogPost" }],
+          "pagination": { "total": 1 }
+        },
+        "errors": []
+      }
+    }
+  },
+  "blogPostCreatePresent": true,
+  "blogMutationNames": [
+    "blogPostCreate",
+    "blogPostUpdate",
+    "blogPostsDelete",
+    "blogCategoryCreate",
+    "blogCategoryUpdate",
+    "blogCategoriesDelete",
+    "blogCommentUpdate",
+    "blogCommentsDelete",
+    "blogPostImageUpload",
+    "blogPostImageUpdate",
+    "blogPostImagesDelete"
+  ],
+  "BlogDecision": {
+    "convention": "input-wrapped",
+    "endpoint": "experimental",
+    "queryOk": true,
+    "rowCount": 1,
+    "blogPostFields": [
+      "id:ID",
+      "addedBy:String",
+      "createdAt:DateTime",
+      "pageId:Int",
+      "categoryIds:NON_NULL",
+      "categories:BlogCategory",
+      "comments:BlogComment",
+      "images:BlogPostImage",
+      "displayInterval:BlogDisplayInterval",
+      "translations:NON_NULL"
+    ],
+    "mutationName": "blogPostCreate",
+    "seedTransport": "graphql-mutation",
+    "implementPosts": true,
+    "postsLandedNext": true,
+    "fault": null,
+    "translationElementType": "BlogPostTranslation",
+    "translationFields": [
+      "data:BlogPostTranslationData",
+      "language:DisplayLanguage"
+    ],
+    "translationDataType": "BlogPostTranslationData",
+    "translationDataFields": [
+      "title:String",
+      "text:String",
+      "textList:String",
+      "seoTitle:String",
+      "seoKeywords:String",
+      "seoDescription:String"
+    ],
+    "translationDataScalars": [
+      "title",
+      "text",
+      "textList",
+      "seoTitle",
+      "seoKeywords",
+      "seoDescription"
+    ],
+    "displayLanguageScalars": [
+      "iso",
+      "name",
+      "primary"
+    ],
+    "translationsTypenameQueryStatus": 500,
+    "translationsDataQueryStatus": 200
+  },
+  "blogPostTranslationType": {
+    "name": "BlogPostTranslation",
+    "fields": [
+      "data:BlogPostTranslationData",
+      "language:DisplayLanguage"
+    ]
+  },
+  "blogPostTranslationDataType": {
+    "name": "BlogPostTranslationData",
+    "fields": [
+      "title:String",
+      "text:String",
+      "textList:String",
+      "seoTitle:String",
+      "seoKeywords:String",
+      "seoDescription:String"
+    ]
+  }
+}

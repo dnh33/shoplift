@@ -1,0 +1,128 @@
+{
+  "provenance": "RECORDED: gaps.json sections.pages.audit.returned, byIdsCount, byIdsTitles, byFolder (id/count/titles). Naive-parser collapse of PageText_GetByIds to returned == [item, LanguageAccess]. Page bodies are not here; pages.json holds the folder-sweep reconstruction.",
+  "responses": {},
+  "collapse": {
+    "auditReturned": [
+      "item",
+      "LanguageAccess"
+    ],
+    "byIdsCount": 1,
+    "byIdsTitles": [],
+    "byFolder": [
+      {
+        "folderId": 0,
+        "count": 1,
+        "titles": []
+      },
+      {
+        "folderId": 1,
+        "count": 1,
+        "titles": []
+      },
+      {
+        "folderId": 2,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 3,
+        "count": 4,
+        "titles": [
+          "Om os",
+          "Kontakt",
+          "Handelsbetingelser",
+          "Cookies"
+        ]
+      },
+      {
+        "folderId": 4,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 5,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 6,
+        "count": 1,
+        "titles": [
+          "Nyheder"
+        ]
+      },
+      {
+        "folderId": 7,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 8,
+        "count": 1,
+        "titles": [
+          "Produktkatalog"
+        ]
+      },
+      {
+        "folderId": 9,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 10,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 11,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 12,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 13,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 14,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 15,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 16,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 17,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 18,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 19,
+        "count": 0,
+        "titles": []
+      },
+      {
+        "folderId": 20,
+        "count": 0,
+        "titles": []
+      }
+    ]
+  }
+}

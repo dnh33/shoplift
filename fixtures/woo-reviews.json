@@ -1,0 +1,22 @@
+[
+  {
+    "id": 501,
+    "product_id": 101,
+    "reviewer": "Mette H.",
+    "reviewer_email": "mette@example.dk",
+    "rating": 5,
+    "review": "<p>Skøn kop!</p>",
+    "date_created": "2025-12-01T10:00:00",
+    "status": "approved"
+  },
+  {
+    "id": 502,
+    "product_id": 102,
+    "reviewer": "Jens",
+    "reviewer_email": "jens@example.dk",
+    "rating": 4,
+    "review": "<p>God pasform.</p>",
+    "date_created": "2026-01-05T12:00:00",
+    "status": "approved"
+  }
+]

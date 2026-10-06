@@ -1,0 +1,29 @@
+[
+  {
+    "id": 11,
+    "name": "Køkken",
+    "slug": "koekken",
+    "parent": 0,
+    "description": "Alt til køkkenet",
+    "image": {
+      "src": "https://www.example-shop.com/wp-content/uploads/cat-koekken.jpg",
+      "alt": "Køkken"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Tøj",
+    "slug": "toej",
+    "parent": 0,
+    "description": "",
+    "image": null
+  },
+  {
+    "id": 13,
+    "name": "Gavesæt",
+    "slug": "gavesaet",
+    "parent": 0,
+    "description": "Færdige gavesæt",
+    "image": null
+  }
+]

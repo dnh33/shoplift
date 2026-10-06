@@ -1,0 +1,55 @@
+name: New source adapter / entity
+description: Support another WP commerce plugin, or map an entity the pipeline does not handle yet.
+labels: [enhancement, adapter]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Adapters normalize a WP plugin's REST shape to the WooCommerce shape the
+        transform layer already understands. `src/sources/edd.js` is the reference —
+        about 100 lines.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - New source adapter (another WP commerce plugin)
+        - New Shopify entity (transform + import module)
+        - New locale
+    validations:
+      required: true
+
+  - type: input
+    id: plugin
+    attributes:
+      label: Plugin / entity
+      placeholder: e.g. WP EasyCart, or Shopify metaobjects
+
+  - type: input
+    id: rest
+    attributes:
+      label: REST namespace and docs URL
+      placeholder: e.g. /wp-json/wc/v3, https://…
+
+  - type: textarea
+    id: shape
+    attributes:
+      label: Where its data shape diverges from WooCommerce
+      description: Fields that have no Woo equivalent, differently-nested variants, different status vocabulary, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: lossy
+    attributes:
+      label: What would be lossy
+      description: >
+        Anything that cannot map cleanly must emit a line in `warnings.jsonl`
+        rather than silently deciding. List the cases you already know about.
+
+  - type: input
+    id: demand
+    attributes:
+      label: Which client / how many stores need this
+      placeholder: Justifies the maintenance cost.

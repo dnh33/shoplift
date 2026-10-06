@@ -1,0 +1,68 @@
+name: Live migration incident
+description: A run against a real client store did something wrong — duplicates, data loss, partial import, rate-limit stall.
+labels: [incident, live-run]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For incidents on **real client stores**. These are the ones that go into
+        PLAYBOOK §9 afterwards ("anything discovered live that the docs didn't say").
+
+        **Never paste credentials, customer PII, or the client's store name** if this
+        repo is ever shared beyond the owner. Use "client A" and redact.
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - 'S1 — wrong data landed on a live store (duplicates, overwrites, bad prices)'
+        - 'S2 — import stalled or partially completed, store not yet live'
+        - 'S3 — recoverable by re-running; noting it for the playbook'
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What landed on the store that should not have (or did not land that should have)
+    validations:
+      required: true
+
+  - type: textarea
+    id: ledger
+    attributes:
+      label: Ledger state
+      description: >
+        Was `data/state/idmap.json` consistent with the store? Did a re-run
+        duplicate anything? Idempotency is invariant #1 — a breach here is
+        always at least S2.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      placeholder: |
+        1. imported products,collections — clean
+        2. imported orders — connection dropped at ~40%
+        3. re-ran orders — N duplicates appeared
+    validations:
+      required: true
+
+  - type: textarea
+    id: remediation
+    attributes:
+      label: How it was remediated on the store
+      description: Manual cleanup, `scripts/cleanup-duplicate-orders.mjs`, wipe + reimport, or not yet fixed.
+
+  - type: checkboxes
+    id: followup
+    attributes:
+      label: Follow-up
+      options:
+        - label: Add a regression assertion to the offline suite (`test/run-fixtures.js` or `test/run-import-sim.js`)
+        - label: Write the finding into PLAYBOOK §9
+        - label: An ARCHITECTURE.md invariant needs to change or be added

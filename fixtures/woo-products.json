@@ -1,0 +1,365 @@
+[
+  {
+    "id": 101,
+    "name": "Kaffekop i keramik",
+    "slug": "kaffekop-keramik",
+    "permalink": "https://www.example-shop.com/produkt/kaffekop-keramik/",
+    "type": "simple",
+    "status": "publish",
+    "description": "<!-- wp:paragraph --><p>Håndlavet kop fra <a href=\"https://www.example-shop.com/om-os/\">vores værksted</a>.</p><!-- /wp:paragraph -->[gallery ids=\"1,2\"]",
+    "short_description": "<p>Håndlavet keramikkop.</p>",
+    "sku": "CUP-001",
+    "price": "129",
+    "regular_price": "179",
+    "sale_price": "129",
+    "manage_stock": true,
+    "stock_quantity": 42,
+    "backorders": "no",
+    "tax_status": "taxable",
+    "weight": "0.4",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Køkken",
+        "slug": "koekken"
+      }
+    ],
+    "tags": [
+      {
+        "id": 31,
+        "name": "keramik"
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.example-shop.com/wp-content/uploads/2025/03/kop.jpg",
+        "alt": "Kaffekop"
+      }
+    ],
+    "attributes": [],
+    "meta_data": [
+      {
+        "key": "_yoast_wpseo_title",
+        "value": "Kaffekop i keramik – håndlavet"
+      },
+      {
+        "key": "_yoast_wpseo_metadesc",
+        "value": "Håndlavet keramikkop fra dansk værksted."
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "T-shirt Basic",
+    "slug": "t-shirt-basic",
+    "permalink": "https://www.example-shop.com/produkt/t-shirt-basic/",
+    "type": "variable",
+    "status": "publish",
+    "description": "<p>Klassisk t-shirt i økologisk bomuld.</p>",
+    "sku": "TS-BASE",
+    "price": "199",
+    "regular_price": "",
+    "sale_price": "",
+    "manage_stock": false,
+    "tax_status": "taxable",
+    "weight": "0.2",
+    "categories": [
+      {
+        "id": 12,
+        "name": "Tøj",
+        "slug": "toej"
+      }
+    ],
+    "tags": [],
+    "images": [
+      {
+        "src": "https://www.example-shop.com/wp-content/uploads/2025/03/tshirt.jpg",
+        "alt": "T-shirt"
+      }
+    ],
+    "attributes": [
+      {
+        "id": 1,
+        "name": "Størrelse",
+        "variation": true,
+        "options": [
+          "S",
+          "M"
+        ]
+      },
+      {
+        "id": 2,
+        "name": "Farve",
+        "variation": true,
+        "options": [
+          "Sort",
+          "Hvid"
+        ]
+      }
+    ],
+    "_variations": [
+      {
+        "id": 1021,
+        "sku": "TS-S-SORT",
+        "regular_price": "199",
+        "sale_price": "",
+        "attributes": [
+          {
+            "name": "Størrelse",
+            "option": "S"
+          },
+          {
+            "name": "Farve",
+            "option": "Sort"
+          }
+        ],
+        "manage_stock": true,
+        "stock_quantity": 10,
+        "backorders": "no",
+        "weight": "0.2",
+        "image": {
+          "src": "https://www.example-shop.com/wp-content/uploads/2025/03/tshirt-sort.jpg"
+        }
+      },
+      {
+        "id": 1022,
+        "sku": "TS-M-HVID",
+        "regular_price": "199",
+        "sale_price": "149",
+        "attributes": [
+          {
+            "name": "Størrelse",
+            "option": "M"
+          },
+          {
+            "name": "Farve",
+            "option": "Hvid"
+          }
+        ],
+        "manage_stock": true,
+        "stock_quantity": 5,
+        "backorders": "notify",
+        "weight": "0.2"
+      }
+    ],
+    "meta_data": []
+  },
+  {
+    "id": 103,
+    "name": "Gavesæt (grouped)",
+    "slug": "gavesaet",
+    "permalink": "https://www.example-shop.com/produkt/gavesaet/",
+    "type": "grouped",
+    "status": "publish",
+    "grouped_products": [
+      101,
+      102
+    ],
+    "description": "<p>Sammensat sæt.</p>",
+    "sku": "",
+    "price": "",
+    "regular_price": "",
+    "manage_stock": false,
+    "categories": [
+      {
+        "id": 11,
+        "name": "Køkken",
+        "slug": "koekken"
+      }
+    ],
+    "tags": [],
+    "images": [],
+    "attributes": [],
+    "meta_data": []
+  },
+  {
+    "id": 104,
+    "name": "  Plaid &amp; Pude Øko ",
+    "slug": "plaid-oeko",
+    "permalink": "https://www.example-shop.com/produkt/plaid-oeko/",
+    "type": "simple",
+    "status": "publish",
+    "description": "<p class=\"MsoNormal\" style=\"mso-margin-top-alt:auto;line-height:normal\"><span style=\"font-family:&quot;Calibri&quot;,sans-serif;mso-ascii-theme-font:minor-latin\"><span>Blødt plaid</span> i økologisk uld – “hygge” til sofaen.</span><o:p></o:p></p><!--[if !supportLists]--><p>Vaskes skånsomt.</p><!--[endif]--><p>Se <a href=\"https://www.example-shop.com/?p=123\">vores gamle indlæg</a> om uldpleje.</p>",
+    "short_description": "<p>Økoplaid.</p>",
+    "sku": " PLAID-OKO-1 ",
+    "price": "249",
+    "regular_price": "199",
+    "sale_price": "249",
+    "manage_stock": true,
+    "stock_quantity": 7,
+    "backorders": "no",
+    "tax_status": "taxable",
+    "weight": "0.8",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Køkken",
+        "slug": "koekken"
+      }
+    ],
+    "tags": [],
+    "images": [],
+    "attributes": [],
+    "meta_data": []
+  },
+  {
+    "id": 105,
+    "name": "Strikkeopskrift: Hue (PDF)",
+    "slug": "strikkeopskrift-hue",
+    "permalink": "https://www.example-shop.com/produkt/strikkeopskrift-hue/",
+    "type": "simple",
+    "status": "publish",
+    "description": "<p>Digital opskrift som PDF.</p>",
+    "sku": "PDF-HUE-1",
+    "price": "39",
+    "regular_price": "39",
+    "sale_price": "",
+    "virtual": true,
+    "downloadable": true,
+    "downloads": [
+      {
+        "id": "d1",
+        "name": "Opskrift: Hue (PDF)",
+        "file": "https://www.example-shop.com/wp-content/uploads/woocommerce_uploads/hue.pdf"
+      }
+    ],
+    "manage_stock": false,
+    "tax_status": "taxable",
+    "categories": [
+      {
+        "id": 12,
+        "name": "Tøj",
+        "slug": "toej"
+      }
+    ],
+    "tags": [],
+    "images": [],
+    "attributes": [],
+    "meta_data": []
+  },
+  {
+    "id": 106,
+    "name": "Hue Merino",
+    "slug": "hue-merino",
+    "permalink": "https://www.example-shop.com/produkt/hue-merino/",
+    "type": "variable",
+    "status": "publish",
+    "description": "<p>Varm hue i merino.</p>",
+    "sku": "",
+    "price": "129",
+    "regular_price": "",
+    "sale_price": "",
+    "manage_stock": false,
+    "tax_status": "taxable",
+    "weight": "0.1",
+    "categories": [
+      {
+        "id": 12,
+        "name": "Tøj",
+        "slug": "toej"
+      }
+    ],
+    "tags": [],
+    "images": [],
+    "attributes": [
+      {
+        "id": 0,
+        "name": "farve",
+        "variation": true,
+        "options": [
+          "Rød",
+          "Blå"
+        ]
+      }
+    ],
+    "_variations": [
+      {
+        "id": 1061,
+        "sku": "HUE-ROD",
+        "regular_price": "129",
+        "sale_price": "",
+        "price": "129",
+        "attributes": [
+          {
+            "name": "farve",
+            "option": "Rød"
+          }
+        ],
+        "manage_stock": true,
+        "stock_quantity": 4,
+        "backorders": "no",
+        "weight": "0.1"
+      },
+      {
+        "id": 1062,
+        "sku": "HUE-BLA",
+        "regular_price": "",
+        "sale_price": "",
+        "price": "",
+        "attributes": [
+          {
+            "name": "farve",
+            "option": "Blå"
+          }
+        ],
+        "manage_stock": true,
+        "stock_quantity": 2,
+        "backorders": "no",
+        "weight": "0.1"
+      }
+    ],
+    "meta_data": []
+  },
+  {
+    "id": 107,
+    "name": "Gave Sæt Deluxe",
+    "slug": "gave_saet",
+    "permalink": "https://www.example-shop.com/produkt/gave_saet/",
+    "type": "simple",
+    "status": "publish",
+    "description": "<p>Sæt A.</p>",
+    "sku": "GS-1",
+    "price": "299",
+    "regular_price": "299",
+    "sale_price": "",
+    "manage_stock": false,
+    "tax_status": "taxable",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Køkken",
+        "slug": "koekken"
+      }
+    ],
+    "tags": [],
+    "images": [],
+    "attributes": [],
+    "meta_data": []
+  },
+  {
+    "id": 108,
+    "name": "Gave-Sæt Deluxe",
+    "slug": "gave-saet",
+    "permalink": "https://www.example-shop.com/produkt/gave-saet/",
+    "type": "simple",
+    "status": "publish",
+    "description": "<p>Sæt B.</p>",
+    "sku": "GS-2",
+    "price": "319",
+    "regular_price": "319",
+    "sale_price": "",
+    "manage_stock": false,
+    "tax_status": "taxable",
+    "categories": [
+      {
+        "id": 11,
+        "name": "Køkken",
+        "slug": "koekken"
+      }
+    ],
+    "tags": [],
+    "images": [],
+    "attributes": [],
+    "meta_data": []
+  }
+]

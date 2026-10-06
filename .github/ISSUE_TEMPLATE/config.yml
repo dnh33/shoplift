@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Migration workflow question (store setup, SEO, go-live)
+    url: https://github.com/dnh33/shoplift/blob/main/PLAYBOOK.md
+    about: The playbook covers everything around the data — scoping, store prep, redirects, go-live, and what cannot be automated. Check it before filing.
+  - name: How the pipeline is built (layers, invariants, extension points)
+    url: https://github.com/dnh33/shoplift/blob/main/ARCHITECTURE.md
+    about: Read the invariants before proposing a change that touches imports, rate limiting, or the ledger.

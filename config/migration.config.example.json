@@ -1,0 +1,112 @@
+{
+  "$comment": "Copy to migration.config.json (gitignored) per client. ${VAR} values are read from environment / .env",
+
+  "source": {
+    "adapter": "woocommerce",
+    "$adapters": "woocommerce | edd | dandomain | fixture",
+    "$kind": "OPTIONAL override of the PLATFORM the adapter reads from: wordpress | dandomain | fixture. Derived from the adapter when absent; only ever set to move an adapter to a different platform. It decides whether WordPress posts/pages are exported, so an unrecognised value is a hard error, not a fallback — otherwise a capital letter would silently produce an export with no content.",
+    "baseUrl": "https://www.example-shop.com",
+    "woocommerce": {
+      "consumerKey": "${WC_CONSUMER_KEY}",
+      "consumerSecret": "${WC_CONSUMER_SECRET}",
+      "apiVersion": "wc/v3",
+      "perPage": 100,
+      "orderStatuses": ["completed", "processing", "on-hold", "refunded"],
+      "ordersAfter": null,
+      "$ordersAfter": "ISO date, e.g. 2023-01-01T00:00:00 — limit exported order history"
+    },
+    "$dandomain": "Used only when adapter is `dandomain`. The SOAP endpoint is per-solution; tenant is the sfstatic/mywebshop subdomain and is what media URLs are built from (R14/R21/R32).",
+    "dandomain": {
+      "endpoint": "https://${DD_TENANT}.webshop.dandomain.dk/admin/webapi/endpoints/v1_1/ProductService.asmx",
+      "username": "${DD_API_USER}",
+      "password": "${DD_API_PASSWORD}",
+      "tenant": "${DD_TENANT}",
+      "lineBasis": "net",
+      "$lineBasis": "REQUIRED, no default: `net` if OrderLine.Price excludes VAT, `gross` if it includes it. R1/R2 — Product.Price is VAT-INCLUSIVE while order lines and Order.Total are NET, and Order.Vat / OrderLine.VatRate are ALWAYS 0, so this cannot be derived from the payload. Guessing it silently misprices every historical order, so the adapter refuses to construct without it.",
+      "pageSize": 100,
+      "pageBase": null,
+      "$pageBase": "0 or 1 — which page index the server's Page argument starts at. Left null it is PROBED (scripts/probe-dandomain.mjs pagebase); set it only to pin a measured answer.",
+      "statusMap": null,
+      "skipStatuses": null,
+      "skipInactiveCoupons": true,
+      "weightUnit": "kg",
+      "language": null,
+      "$language": "Language id for a multi-language solution. Null exports the solution default.",
+      "storefrontUrl": "https://${DD_TENANT}.mywebshop.io",
+      "$storefrontUrl": "R39/R41 — the STOREFRONT host. `{tenant}.webshop.dandomain.dk` is the admin SPA and answers 200 for every path, including invented ones, so it must never be used to test whether a URL exists.",
+      "mediaBase": null,
+      "$mediaBase": "Defaults to https://{tenant}.sfstatic.io/upload_dir/ (R14/R21/R32).",
+      "pageFolderIds": null,
+      "$pageFolderIds": "R36 — the folder list omits folder 0, which HOLDS pages. Left null the adapter sweeps the discovered ids UNION {0}.",
+      "throttle": { "capacity": 1, "refillPerSecond": 4 },
+      "$throttle": "Invariant #3: rate limits are learned, not hardcoded. This is a floor to be polite from the first call, not a measured limit.",
+      "timeoutMs": 60000,
+      "multiLanguage": false,
+      "$multiLanguage": "When true (or options.importTranslations), export secondary SOAP language layers to raw/i18n-products.jsonl for transform → translations.jsonl."
+    },
+    "wpContent": {
+      "enabled": true,
+      "includePosts": true,
+      "includePages": true,
+      "excludePageSlugs": ["cart", "checkout", "my-account", "shop", "kurv", "kasse", "min-konto"],
+      "username": "${WP_APP_USER}",
+      "appPassword": "${WP_APP_PASSWORD}"
+    }
+  },
+
+  "shopify": {
+    "shop": "your-store.myshopify.com",
+    "clientId": "${SHOPIFY_CLIENT_ID}",
+    "clientSecret": "${SHOPIFY_CLIENT_SECRET}",
+    "adminAccessToken": "${SHOPIFY_ADMIN_TOKEN}",
+    "$auth": "Dev Dashboard app: set clientId+clientSecret (token minted automatically). Legacy custom app: set adminAccessToken instead.",
+    "apiVersion": "2026-07",
+    "primaryLocationId": "",
+    "$primaryLocationId": "leave empty to auto-detect the shop's primary location",
+    "blog": { "title": "News", "handle": "news" }
+  },
+
+  "entities": {
+    "products": true,
+    "collections": true,
+    "customers": true,
+    "orders": true,
+    "discounts": true,
+    "pages": true,
+    "articles": true,
+    "redirects": true
+  },
+
+  "options": {
+    "locale": "da",
+    "$locale": "da | en | de | sv | no — merchant-facing note text, blog defaults, localized structural redirects (src/locales.js)",
+    "productStatus": "DRAFT",
+    "$productStatus": "DRAFT (recommended: review then bulk-activate) or ACTIVE",
+    "weightUnit": "KILOGRAMS",
+    "$weightUnit": "unit configured in WooCommerce: GRAMS | KILOGRAMS | OUNCES | POUNDS",
+    "trackInventory": true,
+    "importImagesFrom": "source-url",
+    "$importImagesFrom": "source-url = Shopify downloads images from the live WP site during import (site must stay online)",
+    "productsBulkThreshold": 25,
+    "$productsBulkThreshold": "catalogs larger than this use Shopify bulk operations (JSONL); smaller run synchronous productSet calls",
+    "orders": {
+      "markFulfilledWhenComplete": true,
+      "importCancelled": false,
+      "tag": "wp-import"
+    },
+    "skipExpiredCoupons": true,
+    "stripShortcodes": true,
+    "rewriteInternalLinks": true,
+    "dryRun": false,
+    "importB2bPricing": false,
+    "$importB2bPricing": "When true, create B2B catalogs + price lists and attach group-scoped ProductDiscount rows from raw (_dd_group_discounts). Off by default — public R42 prices unchanged.",
+    "importRefunds": false,
+    "$importRefunds": "When true, call refundCreate for adapter-recorded partial refunds. Default remains label-level fold + REFUND_PARTIAL info warning.",
+    "importGiftCards": false,
+    "$importGiftCards": "When true, import transformed/gift-cards.csv via giftCardCreate. No DanDomain GraphQL export (F24 dead).",
+    "importTranslations": false,
+    "$importTranslations": "When true, export secondary SOAP language layers and import transformed/translations.jsonl. Also set source.dandomain.multiLanguage to export layers without importing."
+  },
+
+  "paths": { "data": "./data" }
+}

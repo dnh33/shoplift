@@ -1,0 +1,643 @@
+{
+  "op": "Order_GetAllWithPagination",
+  "truth": {
+    "op": "Order_GetByDate",
+    "ok": true,
+    "count": 20,
+    "ids": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18",
+      "19",
+      "20"
+    ],
+    "fault": null
+  },
+  "pageSize": 5,
+  "firstPages": {
+    "0": {
+      "ok": false,
+      "fault": "PARAM: SoapFault PARAM: Page must be greater than 0",
+      "ids": []
+    },
+    "1": {
+      "ok": true,
+      "fault": null,
+      "ids": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    }
+  },
+  "walks": {
+    "0": {
+      "base": 0,
+      "pages": [
+        {
+          "page": 0,
+          "fault": "PARAM: SoapFault PARAM: Page must be greater than 0"
+        }
+      ],
+      "collected": 0,
+      "unique": 0,
+      "duplicates": 0,
+      "missing": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "extra": [],
+      "reproducesTruth": false
+    },
+    "1": {
+      "base": 1,
+      "pages": [
+        {
+          "page": 1,
+          "rows": 5
+        },
+        {
+          "page": 2,
+          "rows": 5
+        },
+        {
+          "page": 3,
+          "rows": 5
+        },
+        {
+          "page": 4,
+          "rows": 5
+        },
+        {
+          "page": 5,
+          "rows": 0
+        }
+      ],
+      "collected": 20,
+      "unique": 20,
+      "duplicates": 0,
+      "missing": [],
+      "extra": [],
+      "reproducesTruth": true
+    }
+  },
+  "decided": true,
+  "base": 1,
+  "why": "walking from 1 reproduced all 20 orders exactly once; walking from 0 did not (0 duplicate(s), 0 extra).",
+  "pageOpsFromWsdl": [
+    "Product_GetDiscountsAccumulativeAllWithPagination",
+    "Order_GetAllWithPagination",
+    "Order_GetByDateWithPagination",
+    "Order_GetByDateUpdatedWithPagination",
+    "Order_GetByStatusWithPagination"
+  ],
+  "allPageOps": [
+    {
+      "op": "Product_GetDiscountsAccumulativeAllWithPagination",
+      "argNames": [
+        "Page",
+        "PageSize"
+      ],
+      "attempts": [
+        {
+          "variant": "declared-args",
+          "sentArgs": [
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": true,
+              "code": null,
+              "fault": null,
+              "arity": false,
+              "rows": 0,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": true,
+              "code": null,
+              "fault": null,
+              "arity": false,
+              "rows": 0,
+              "ids": []
+            }
+          ],
+          "base": null,
+          "why": "both candidate first pages returned ZERO rows: this selection is empty, so it carries no evidence. Not a base."
+        }
+      ],
+      "variantUsed": "declared-args",
+      "base": null,
+      "decided": false,
+      "why": "both candidate first pages returned ZERO rows: this selection is empty, so it carries no evidence. Not a base."
+    },
+    {
+      "op": "Order_GetAllWithPagination",
+      "argNames": [
+        "Page",
+        "PageSize"
+      ],
+      "attempts": [
+        {
+          "variant": "declared-args",
+          "sentArgs": [
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": false,
+              "code": "PARAM",
+              "fault": "PARAM: SoapFault PARAM: Page must be greater than 0",
+              "arity": false,
+              "rows": null,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": true,
+              "code": null,
+              "fault": null,
+              "arity": false,
+              "rows": 5,
+              "ids": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            }
+          ],
+          "base": 1,
+          "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+        }
+      ],
+      "variantUsed": "declared-args",
+      "base": 1,
+      "decided": true,
+      "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+    },
+    {
+      "op": "Order_GetByDateWithPagination",
+      "argNames": [
+        "Start",
+        "End",
+        "Status",
+        "Page",
+        "PageSize"
+      ],
+      "attempts": [
+        {
+          "variant": "status-omitted",
+          "sentArgs": [
+            "Start",
+            "End",
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": false,
+              "code": "Receiver",
+              "fault": "Receiver: SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+              "arity": true,
+              "rows": null,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": false,
+              "code": "Receiver",
+              "fault": "Receiver: SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+              "arity": true,
+              "rows": null,
+              "ids": []
+            }
+          ],
+          "base": null,
+          "why": "ARGUMENTS UNRESOLVED — the server answered a PHP arity error, so the call never reached the paging code (R17/R27). Not evidence either way."
+        },
+        {
+          "variant": "status-0",
+          "sentArgs": [
+            "Start",
+            "End",
+            "Status",
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": false,
+              "code": "PARAM",
+              "fault": "PARAM: SoapFault PARAM: Page must be greater than 0",
+              "arity": false,
+              "rows": null,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": true,
+              "code": null,
+              "fault": null,
+              "arity": false,
+              "rows": 5,
+              "ids": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            }
+          ],
+          "base": 1,
+          "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+        }
+      ],
+      "variantUsed": "status-0",
+      "base": 1,
+      "decided": true,
+      "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+    },
+    {
+      "op": "Order_GetByDateUpdatedWithPagination",
+      "argNames": [
+        "Start",
+        "End",
+        "Status",
+        "Page",
+        "PageSize"
+      ],
+      "attempts": [
+        {
+          "variant": "status-omitted",
+          "sentArgs": [
+            "Start",
+            "End",
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": false,
+              "code": "Receiver",
+              "fault": "Receiver: SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateUpdatedWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+              "arity": true,
+              "rows": null,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": false,
+              "code": "Receiver",
+              "fault": "Receiver: SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateUpdatedWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+              "arity": true,
+              "rows": null,
+              "ids": []
+            }
+          ],
+          "base": null,
+          "why": "ARGUMENTS UNRESOLVED — the server answered a PHP arity error, so the call never reached the paging code (R17/R27). Not evidence either way."
+        },
+        {
+          "variant": "status-0",
+          "sentArgs": [
+            "Start",
+            "End",
+            "Status",
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": false,
+              "code": "PARAM",
+              "fault": "PARAM: SoapFault PARAM: Page must be greater than 0",
+              "arity": false,
+              "rows": null,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": true,
+              "code": null,
+              "fault": null,
+              "arity": false,
+              "rows": 0,
+              "ids": []
+            }
+          ],
+          "base": 1,
+          "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+        }
+      ],
+      "variantUsed": "status-0",
+      "base": 1,
+      "decided": true,
+      "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+    },
+    {
+      "op": "Order_GetByStatusWithPagination",
+      "argNames": [
+        "Status",
+        "Page",
+        "PageSize"
+      ],
+      "attempts": [
+        {
+          "variant": "status-omitted",
+          "sentArgs": [
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": false,
+              "code": "Receiver",
+              "fault": "Receiver: SoapFault Receiver: Too few arguments to function WebService::Order_GetByStatusWithPagination(), 2 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 3 expected",
+              "arity": true,
+              "rows": null,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": false,
+              "code": "Receiver",
+              "fault": "Receiver: SoapFault Receiver: Too few arguments to function WebService::Order_GetByStatusWithPagination(), 2 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 3 expected",
+              "arity": true,
+              "rows": null,
+              "ids": []
+            }
+          ],
+          "base": null,
+          "why": "ARGUMENTS UNRESOLVED — the server answered a PHP arity error, so the call never reached the paging code (R17/R27). Not evidence either way."
+        },
+        {
+          "variant": "status-0",
+          "sentArgs": [
+            "Status",
+            "Page",
+            "PageSize"
+          ],
+          "probes": [
+            {
+              "page": 0,
+              "ok": false,
+              "code": "PARAM",
+              "fault": "PARAM: SoapFault PARAM: Page must be greater than 0",
+              "arity": false,
+              "rows": null,
+              "ids": []
+            },
+            {
+              "page": 1,
+              "ok": true,
+              "code": null,
+              "fault": null,
+              "arity": false,
+              "rows": 5,
+              "ids": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+              ]
+            }
+          ],
+          "base": 1,
+          "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+        }
+      ],
+      "variantUsed": "status-0",
+      "base": 1,
+      "decided": true,
+      "why": "the server REJECTED Page=0 in its own words (\"PARAM: SoapFault PARAM: Page must be greater than 0\") and accepted Page=1."
+    }
+  ],
+  "agreement": {
+    "total": 5,
+    "decided": [
+      {
+        "op": "Order_GetAllWithPagination",
+        "base": 1
+      },
+      {
+        "op": "Order_GetByDateWithPagination",
+        "base": 1
+      },
+      {
+        "op": "Order_GetByDateUpdatedWithPagination",
+        "base": 1
+      },
+      {
+        "op": "Order_GetByStatusWithPagination",
+        "base": 1
+      }
+    ],
+    "silent": [
+      "Product_GetDiscountsAccumulativeAllWithPagination"
+    ],
+    "unanimous": true,
+    "base": 1,
+    "agreesWithWalk": true
+  },
+  "statusOnPaginatedVariants": {
+    "opsWithStatus": [
+      "Order_GetByDateWithPagination",
+      "Order_GetByDateUpdatedWithPagination",
+      "Order_GetByStatusWithPagination"
+    ],
+    "omittingStatusFaults": [
+      "Order_GetByDateWithPagination",
+      "Order_GetByDateUpdatedWithPagination",
+      "Order_GetByStatusWithPagination"
+    ],
+    "rule": "Status is REQUIRED on every *WithPagination variant: omitting it returns a PHP arity error (Too few arguments), NOT an empty selection. R16's 'Status is optional' holds for Order_GetByDate and does NOT extend to the paginated forms. Send Status explicitly."
+  },
+  "faults": [
+    {
+      "ok": false,
+      "op": "Order_GetAllWithPagination",
+      "code": "PARAM",
+      "message": "SoapFault PARAM: Page must be greater than 0",
+      "args": [
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetAllWithPagination",
+      "code": "PARAM",
+      "message": "SoapFault PARAM: Page must be greater than 0",
+      "args": [
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetAllWithPagination",
+      "code": "PARAM",
+      "message": "SoapFault PARAM: Page must be greater than 0",
+      "args": [
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByDateWithPagination",
+      "code": "Receiver",
+      "message": "SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+      "args": [
+        "Start",
+        "End",
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByDateWithPagination",
+      "code": "Receiver",
+      "message": "SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+      "args": [
+        "Start",
+        "End",
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByDateWithPagination",
+      "code": "PARAM",
+      "message": "SoapFault PARAM: Page must be greater than 0",
+      "args": [
+        "Start",
+        "End",
+        "Status",
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByDateUpdatedWithPagination",
+      "code": "Receiver",
+      "message": "SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateUpdatedWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+      "args": [
+        "Start",
+        "End",
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByDateUpdatedWithPagination",
+      "code": "Receiver",
+      "message": "SoapFault Receiver: Too few arguments to function WebService::Order_GetByDateUpdatedWithPagination(), 4 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 5 expected",
+      "args": [
+        "Start",
+        "End",
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByDateUpdatedWithPagination",
+      "code": "PARAM",
+      "message": "SoapFault PARAM: Page must be greater than 0",
+      "args": [
+        "Start",
+        "End",
+        "Status",
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByStatusWithPagination",
+      "code": "Receiver",
+      "message": "SoapFault Receiver: Too few arguments to function WebService::Order_GetByStatusWithPagination(), 2 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 3 expected",
+      "args": [
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByStatusWithPagination",
+      "code": "Receiver",
+      "message": "SoapFault Receiver: Too few arguments to function WebService::Order_GetByStatusWithPagination(), 2 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 3 expected",
+      "args": [
+        "Page",
+        "PageSize"
+      ]
+    },
+    {
+      "ok": false,
+      "op": "Order_GetByStatusWithPagination",
+      "code": "PARAM",
+      "message": "SoapFault PARAM: Page must be greater than 0",
+      "args": [
+        "Status",
+        "Page",
+        "PageSize"
+      ]
+    }
+  ],
+  "verdict": "PAGE BASE = 1. walking from 1 reproduced all 20 orders exactly once; walking from 0 did not (0 duplicate(s), 0 extra). Decided by comparing each walk against an INDEPENDENT truth set from Order_GetByDate, not by a reply code or by the client's own detector. All 4 of 5 Page/PageSize operations that could answer agree on base 1 (1 carried no evidence: Product_GetDiscountsAccumulativeAllWithPagination). 12 fault(s) RECORDED, and they are the evidence: 6 are the server REJECTING Page=0 with its own \"Page must be greater than 0\" across 4 operation(s); 6 are PHP arity errors from omitting the nillable Status argument, which is the separate finding in statusOnPaginatedVariants. None is unexplained.",
+  "interpret": "Bound: ONE shop (shop000000). The walk settles Order_GetAllWithPagination against an independent truth set; the sweep asks every Page/PageSize operation the WSDL declares whether it agrees. An op whose result set is empty answers nothing and is listed as silent, not as agreeing. Treat the result as the platform default only until a SECOND SHOP agrees, and keep { pageBase } overridable on every call."
+}

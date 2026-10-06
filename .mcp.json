@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "shoplift": {
+      "command": "node",
+      "args": [
+        "${SHOPLIFT_HOME:-.}/src/mcp-server.js",
+        "--config",
+        "${SHOPLIFT_HOME:-.}/config/migration.config.json"
+      ]
+    }
+  }
+}

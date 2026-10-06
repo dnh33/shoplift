@@ -1,0 +1,9 @@
+[
+  {
+    "id": 501, "email": "mette@example.dk", "first_name": "Mette", "last_name": "Hansen",
+    "billing": { "first_name": "Mette", "last_name": "Hansen", "address_1": "Nørregade 12", "city": "København", "postcode": "1165", "country": "DK", "phone": "+4520123456", "email": "mette@example.dk" },
+    "shipping": { "first_name": "Mette", "last_name": "Hansen", "address_1": "Nørregade 12", "city": "København", "postcode": "1165", "country": "DK" },
+    "meta_data": []
+  },
+  { "id": 502, "email": "", "first_name": "Ghost", "last_name": "NoEmail", "billing": {}, "shipping": {}, "meta_data": [] }
+]

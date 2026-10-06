@@ -1,0 +1,29 @@
+{
+  "provenance": "CONSTRUCTED GraphQL BlogPost row for Task 7 posts(). Top-level field names copied from data/probes/completeness-blog.json blogPostType. Nested shape copied from recorded BlogPostTranslation / BlogPostTranslationData (gqldeep 2026-08-18): translations[].data.{title,text,textList,seoTitle,seoKeywords,seoDescription} and translations[].language.{iso,name,primary}. There is no body/handle/excerpt on the translation type. SOAP Blog_* is NOT-IN-WSDL. Not a SOAP envelope pack.",
+  "rows": [
+    {
+      "id": "9",
+      "addedBy": null,
+      "createdAt": "2026-08-01 10:00:00",
+      "pageId": null,
+      "categoryIds": [],
+      "translations": [
+        {
+          "data": {
+            "title": "Hygge i stuen",
+            "text": "<p>Et indlæg.</p>",
+            "textList": "Teaser",
+            "seoTitle": null,
+            "seoKeywords": null,
+            "seoDescription": null
+          },
+          "language": {
+            "iso": "DK",
+            "name": "Dansk",
+            "primary": true
+          }
+        }
+      ]
+    }
+  ]
+}

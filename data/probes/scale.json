@@ -1,0 +1,207 @@
+{
+  "requested": 300,
+  "categoryId": 9,
+  "created": [
+    {
+      "from": 0,
+      "count": 50,
+      "ok": true,
+      "ms": 430,
+      "fault": null
+    },
+    {
+      "from": 50,
+      "count": 50,
+      "ok": true,
+      "ms": 155,
+      "fault": null
+    },
+    {
+      "from": 100,
+      "count": 50,
+      "ok": true,
+      "ms": 195,
+      "fault": null
+    },
+    {
+      "from": 150,
+      "count": 50,
+      "ok": true,
+      "ms": 168,
+      "fault": null
+    },
+    {
+      "from": 200,
+      "count": 50,
+      "ok": true,
+      "ms": 162,
+      "fault": null
+    },
+    {
+      "from": 250,
+      "count": 50,
+      "ok": true,
+      "ms": 161,
+      "fault": null
+    }
+  ],
+  "pages": [
+    {
+      "pageSize": 50,
+      "ok": true,
+      "ms": 151,
+      "bytes": 27780,
+      "products": 50,
+      "productMarkers": {
+        "VatGroupId": 50,
+        "SeoLink": 8,
+        "Online": 50
+      },
+      "markersAgree": false,
+      "itemTagsIncludingNested": 124,
+      "msPerProduct": 3.02,
+      "bytesPerProduct": 556,
+      "parsedLength": 1,
+      "parserAgreesWithRaw": false
+    },
+    {
+      "pageSize": 100,
+      "ok": true,
+      "ms": 212,
+      "bytes": 51982,
+      "products": 100,
+      "productMarkers": {
+        "VatGroupId": 100,
+        "SeoLink": 8,
+        "Online": 100
+      },
+      "markersAgree": false,
+      "itemTagsIncludingNested": 224,
+      "msPerProduct": 2.12,
+      "bytesPerProduct": 520,
+      "parsedLength": 1,
+      "parserAgreesWithRaw": false
+    },
+    {
+      "pageSize": 250,
+      "ok": true,
+      "ms": 387,
+      "bytes": 124996,
+      "products": 250,
+      "productMarkers": {
+        "VatGroupId": 250,
+        "SeoLink": 8,
+        "Online": 250
+      },
+      "markersAgree": false,
+      "itemTagsIncludingNested": 524,
+      "msPerProduct": 1.548,
+      "bytesPerProduct": 500,
+      "parsedLength": 1,
+      "parserAgreesWithRaw": false
+    },
+    {
+      "pageSize": 500,
+      "ok": true,
+      "ms": 708,
+      "bytes": 245070,
+      "products": 500,
+      "productMarkers": {
+        "VatGroupId": 500,
+        "SeoLink": 8,
+        "Online": 500
+      },
+      "markersAgree": false,
+      "itemTagsIncludingNested": 1024,
+      "msPerProduct": 1.416,
+      "bytesPerProduct": 490,
+      "parsedLength": 1,
+      "parserAgreesWithRaw": false
+    },
+    {
+      "pageSize": 1000,
+      "ok": true,
+      "ms": 745,
+      "bytes": 301592,
+      "products": 618,
+      "productMarkers": {
+        "VatGroupId": 618,
+        "SeoLink": 8,
+        "Online": 618
+      },
+      "markersAgree": false,
+      "itemTagsIncludingNested": 1260,
+      "msPerProduct": 1.206,
+      "bytesPerProduct": 488,
+      "parsedLength": 1,
+      "parserAgreesWithRaw": false
+    }
+  ],
+  "tag": "SCALE-PROBE",
+  "setFieldsOk": true,
+  "setFieldsFault": null,
+  "catalogueSize": 618,
+  "pageSizeHonoured": [
+    50,
+    100,
+    250,
+    500
+  ],
+  "pageSizeCeiling": {
+    "note": "every page size above 618 returned the whole catalogue — no server cap observed up to 1000"
+  },
+  "markerDisagreement": [
+    {
+      "pageSize": 50,
+      "productMarkers": {
+        "VatGroupId": 50,
+        "SeoLink": 8,
+        "Online": 50
+      }
+    },
+    {
+      "pageSize": 100,
+      "productMarkers": {
+        "VatGroupId": 100,
+        "SeoLink": 8,
+        "Online": 100
+      }
+    },
+    {
+      "pageSize": 250,
+      "productMarkers": {
+        "VatGroupId": 250,
+        "SeoLink": 8,
+        "Online": 250
+      }
+    },
+    {
+      "pageSize": 500,
+      "productMarkers": {
+        "VatGroupId": 500,
+        "SeoLink": 8,
+        "Online": 500
+      }
+    },
+    {
+      "pageSize": 1000,
+      "productMarkers": {
+        "VatGroupId": 618,
+        "SeoLink": 8,
+        "Online": 618
+      }
+    }
+  ],
+  "parserDisagreedEverywhere": true,
+  "projected10k": {
+    "basisMsPerProduct": 1.206,
+    "basisPageSize": 1000,
+    "calls": 10,
+    "estimatedReadSeconds": 12,
+    "estimatedBytes": 4880000,
+    "caveat": "linear extrapolation from a few hundred mostly-empty products — optimistic by construction"
+  },
+  "faults": [],
+  "verdict": "Catalogue is 618 products. Fully-inlined read of all of them took 745ms at page size 1000 (1.206 ms/product, 488 bytes/product). **R5's paged-batch architecture HOLDS at 618 products** — ~10 calls for a 10k catalogue against the ~110,000 the pre-R5 N+1 design implied. NOTE: the naive parser reported ONE record on every page (R6/R18), so all counts here come from the response bytes. NOTE: product-only markers disagreed on 5 page(s) — see markerDisagreement.",
+  "interpret": "products/msPerProduct/bytesPerProduct count PRODUCT-ONLY tags in the response BYTES. Counting <item> instead would inflate the total, because nested Variants/Pictures/StockLocations rows are <item> too — the first run of this probe made exactly that error. The extrapolation bounds the ARCHITECTURE (paged batch vs N+1); it is NOT a wall-clock estimate for a real migration: these products are near-empty, and bytesPerProduct will be far higher on a real catalogue with descriptions, variants and images."
+}

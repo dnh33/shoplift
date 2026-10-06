@@ -1,0 +1,16 @@
+{
+  "source": {
+    "adapter": "fixture",
+    "baseUrl": "https://www.example-shop.com",
+    "wpContent": { "enabled": true, "includePosts": true, "includePages": true }
+  },
+  "shopify": {
+    "shop": "test.myshopify.com",
+    "adminAccessToken": "test-token",
+    "apiVersion": "2026-07",
+    "blog": { "title": "Blog", "handle": "blog" }
+  },
+  "entities": { "products": true, "collections": true, "customers": true, "orders": true, "discounts": true, "pages": true, "articles": true, "redirects": true },
+  "options": { "productStatus": "ACTIVE", "weightUnit": "KILOGRAMS", "dryRun": true },
+  "paths": { "data": "./data-test" }
+}

@@ -1,0 +1,1067 @@
+{
+  "sections": {
+    "customers": {
+      "wsdlFieldCount": 56,
+      "setFieldsOk": true,
+      "setFieldsFault": null,
+      "getAllOk": true,
+      "getAllFault": null,
+      "customerCount": 0,
+      "audit": {
+        "requested": [
+          "Id",
+          "Username",
+          "Password",
+          "UserGroupId",
+          "Type",
+          "Company",
+          "CustomData",
+          "Cvr",
+          "Ean",
+          "Firstname",
+          "Lastname",
+          "Sex",
+          "Address",
+          "Address2",
+          "Zip",
+          "City",
+          "Country",
+          "CountryCode",
+          "Currency",
+          "Phone",
+          "Mobile",
+          "Fax",
+          "Email",
+          "Url",
+          "DiscountGroupId",
+          "Newsletter",
+          "Referer",
+          "BirthDate",
+          "DateCreated",
+          "DateUpdated",
+          "Approved",
+          "LanguageISO",
+          "LanguageAccess",
+          "Description",
+          "InterestFields",
+          "Number",
+          "Site",
+          "ShippingType",
+          "ShippingFirstname",
+          "ShippingLastname",
+          "ShippingCompany",
+          "ShippingCvr",
+          "ShippingEan",
+          "ShippingAddress",
+          "ShippingAddress2",
+          "ShippingZip",
+          "ShippingCity",
+          "ShippingCountry",
+          "ShippingCountryCode",
+          "ShippingState",
+          "ShippingPhone",
+          "ShippingMobile",
+          "ShippingEmail",
+          "ShippingReferenceNumber",
+          "Consent",
+          "ConsentDate"
+        ],
+        "returned": [],
+        "missing": [],
+        "sampleAvailable": false,
+        "truncated": null
+      },
+      "sampleRedacted": {},
+      "consentTriplet": [],
+      "threeFieldsAreDistinct": null,
+      "groups": [
+        {
+          "Id": "1",
+          "Title": "Kunder",
+          "Producer": "false"
+        },
+        {
+          "Id": "2",
+          "Title": "Brands / Producenter",
+          "Producer": "true"
+        },
+        {
+          "Id": "3",
+          "Title": "Kun nyhedsbrev tilmeldte",
+          "Producer": "false"
+        },
+        {
+          "Id": "4",
+          "Title": "Kunder B2B-login",
+          "Producer": "false"
+        }
+      ],
+      "newsletterSubscriberCount": 0,
+      "newsletterFault": null,
+      "note": "Values for personal fields are replaced with <type:length> — the shape is the finding, the data is not ours to record."
+    },
+    "priceLines": {
+      "wsdlFieldCount": 16,
+      "wsdlFields": "Id,ProductId,ProductVariantId,Amount,Price,Discount,Currency,DiscountType,UserType,UserId,Date,DateFrom,DateTo,Accumulate,Site,Language",
+      "productsProbed": 6,
+      "priceLineRowsFound": 0,
+      "audit": null,
+      "userTypeValues": [],
+      "userIdValues": [],
+      "scopedRowsPresent": false,
+      "sample": [],
+      "perProduct": [
+        {
+          "productId": 1,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        },
+        {
+          "productId": 2,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        },
+        {
+          "productId": 3,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        },
+        {
+          "productId": 4,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        },
+        {
+          "productId": 5,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        },
+        {
+          "productId": 6,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        }
+      ],
+      "discountGroups": [],
+      "discountGroupProducts": 0,
+      "accumulativeAll": 0,
+      "interpret": "PLAN §3's 'lowest wins' over an UNFILTERED set would publish a B2B price. If priceLineRowsFound is 0 this shop simply has no price lines — that is NOT evidence the scoping is harmless."
+    },
+    "variants": {
+      "wsdlFieldCount": 26,
+      "setVariantFieldsOk": true,
+      "setVariantFieldsFault": null,
+      "variantRowsFound": 4,
+      "audit": {
+        "requested": [
+          "Id",
+          "ProductId",
+          "Stock",
+          "StockLow",
+          "Price",
+          "BuyingPrice",
+          "ItemNumber",
+          "ItemNumberSupplier",
+          "Weight",
+          "DeliveryTime",
+          "DeliveryTimeId",
+          "Description",
+          "DescriptionLong",
+          "Status",
+          "DisableOnEmpty",
+          "Discount",
+          "DiscountType",
+          "Ean",
+          "PictureId",
+          "PictureIds",
+          "Sorting",
+          "VariantTypeValues",
+          "MinAmount",
+          "Title",
+          "Unit",
+          "StockLocations"
+        ],
+        "returned": [
+          "item",
+          "MinAmount",
+          "Title",
+          "Unit",
+          "StockLocations"
+        ],
+        "missing": [
+          "Id",
+          "ProductId",
+          "Stock",
+          "StockLow",
+          "Price",
+          "BuyingPrice",
+          "ItemNumber",
+          "ItemNumberSupplier",
+          "Weight",
+          "DeliveryTime",
+          "DeliveryTimeId",
+          "Description",
+          "DescriptionLong",
+          "Status",
+          "DisableOnEmpty",
+          "Discount",
+          "DiscountType",
+          "Ean",
+          "PictureId",
+          "PictureIds",
+          "Sorting",
+          "VariantTypeValues"
+        ],
+        "sampleAvailable": true,
+        "truncated": true
+      },
+      "sample": [
+        {
+          "item": [
+            {
+              "Id": "4",
+              "ProductId": "1",
+              "Stock": "10",
+              "StockLow": "0",
+              "Price": "199",
+              "BuyingPrice": "79",
+              "ItemNumber": "",
+              "ItemNumberSupplier": "",
+              "Weight": "0",
+              "DeliveryTimeId": "-1",
+              "Status": "true",
+              "DisableOnEmpty": "true",
+              "Discount": "49",
+              "DiscountType": "a",
+              "Ean": "",
+              "PictureId": "0",
+              "PictureIds": null,
+              "Sorting": "0"
+            },
+            {
+              "Id": "5",
+              "ProductId": "1",
+              "Stock": "10",
+              "StockLow": "0",
+              "Price": "199",
+              "BuyingPrice": "79",
+              "ItemNumber": "",
+              "ItemNumberSupplier": "",
+              "Weight": "0",
+              "DeliveryTimeId": "-1",
+              "Status": "true",
+              "DisableOnEmpty": "true",
+              "Discount": "49",
+              "DiscountType": "a",
+              "Ean": "",
+              "PictureId": "0",
+              "PictureIds": null,
+              "Sorting": "1"
+            },
+            {
+              "Id": "28",
+              "ProductId": "1",
+              "Stock": "10",
+              "StockLow": "0",
+              "Price": "199",
+              "BuyingPrice": "79",
+              "ItemNumber": "",
+              "ItemNumberSupplier": "",
+              "Weight": "0",
+              "DeliveryTimeId": "-1",
+              "Status": "true",
+              "DisableOnEmpty": "true",
+              "Discount": "49",
+              "DiscountType": "a",
+              "Ean": "",
+              "PictureId": "0",
+              "PictureIds": null,
+              "Sorting": "2"
+            }
+          ],
+          "MinAmount": [
+            "1",
+            "1",
+            "1"
+          ],
+          "Title": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "Unit": [
+            {
+              "Id": "1",
+              "LanguageISO": "DK",
+              "Title": "stk."
+            },
+            {
+              "Id": "1",
+              "LanguageISO": "DK",
+              "Title": "stk."
+            },
+            {
+              "Id": "1",
+              "LanguageISO": "DK",
+              "Title": "stk."
+            }
+          ],
+          "StockLocations": [
+            {
+              "StockLocationId": "1",
+              "DeliveryTimeId": "-2",
+              "Stock": "10",
+              "BuyPrice": "79"
+            },
+            [
+              {
+                "StockLocationId": "1",
+                "DeliveryTimeId": "-2",
+                "Stock": "10",
+                "BuyPrice": "79"
+              }
+            ],
+            [
+              {
+                "StockLocationId": "1",
+                "DeliveryTimeId": "-2",
+                "Stock": "10",
+                "BuyPrice": "79"
+              }
+            ]
+          ]
+        },
+        {
+          "item": [
+            {
+              "Id": "6",
+              "ProductId": "2",
+              "Stock": "5",
+              "StockLow": "0",
+              "Price": "199",
+              "BuyingPrice": "299",
+              "ItemNumber": "",
+              "ItemNumberSupplier": "",
+              "Weight": "0",
+              "DeliveryTimeId": "-1",
+              "Status": "true",
+              "DisableOnEmpty": "true",
+              "Discount": "49",
+              "DiscountType": "a",
+              "Ean": "",
+              "PictureId": "0",
+              "PictureIds": null,
+              "Sorting": "1"
+            },
+            {
+              "Id": "7",
+              "ProductId": "2",
+              "Stock": "5",
+              "StockLow": "0",
+              "Price": "199",
+              "BuyingPrice": "299",
+              "ItemNumber": "",
+              "ItemNumberSupplier": "",
+              "Weight": "0",
+              "DeliveryTimeId": "-1",
+              "Status": "true",
+              "DisableOnEmpty": "true",
+              "Discount": "49",
+              "DiscountType": "a",
+              "Ean": "",
+              "PictureId": "0",
+              "PictureIds": null,
+              "Sorting": "2"
+            },
+            {
+              "Id": "8",
+              "ProductId": "2",
+              "Stock": "5",
+              "StockLow": "0",
+              "Price": "199",
+              "BuyingPrice": "299",
+              "ItemNumber": "",
+              "ItemNumberSupplier": "",
+              "Weight": "0",
+              "DeliveryTimeId": "-1",
+              "Status": "true",
+              "DisableOnEmpty": "true",
+              "Discount": "49",
+              "DiscountType": "a",
+              "Ean": "",
+              "PictureId": "0",
+              "PictureIds": null,
+              "Sorting": "3"
+            }
+          ],
+          "MinAmount": [
+            "1",
+            "1",
+            "1"
+          ],
+          "Title": [
+            "Small",
+            "Medium",
+            "Large"
+          ],
+          "Unit": [
+            {
+              "Id": "1",
+              "LanguageISO": "DK",
+              "Title": "stk."
+            },
+            {
+              "Id": "1",
+              "LanguageISO": "DK",
+              "Title": "stk."
+            },
+            {
+              "Id": "1",
+              "LanguageISO": "DK",
+              "Title": "stk."
+            }
+          ],
+          "StockLocations": [
+            {
+              "StockLocationId": "1",
+              "DeliveryTimeId": "-2",
+              "Stock": "5",
+              "BuyPrice": "299"
+            },
+            [
+              {
+                "StockLocationId": "1",
+                "DeliveryTimeId": "-2",
+                "Stock": "5",
+                "BuyPrice": "299"
+              }
+            ],
+            [
+              {
+                "StockLocationId": "1",
+                "DeliveryTimeId": "-2",
+                "Stock": "5",
+                "BuyPrice": "299"
+              }
+            ]
+          ]
+        }
+      ],
+      "perProduct": [
+        {
+          "productId": 1,
+          "ok": true,
+          "fault": null,
+          "count": 1
+        },
+        {
+          "productId": 2,
+          "ok": true,
+          "fault": null,
+          "count": 1
+        },
+        {
+          "productId": 3,
+          "ok": true,
+          "fault": null,
+          "count": 1
+        },
+        {
+          "productId": 4,
+          "ok": true,
+          "fault": null,
+          "count": 1
+        },
+        {
+          "productId": 5,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        },
+        {
+          "productId": 6,
+          "ok": true,
+          "fault": null,
+          "count": 0
+        }
+      ],
+      "variantTypes": [
+        {
+          "Id": "1",
+          "LanguageISO": "DK",
+          "Title": "Farve",
+          "Sorting": "3"
+        },
+        {
+          "Id": "2",
+          "LanguageISO": "DK",
+          "Title": "Størrelse",
+          "Sorting": "1"
+        },
+        {
+          "Id": "3",
+          "LanguageISO": "DK",
+          "Title": "Skostørrelse",
+          "Sorting": "2"
+        }
+      ],
+      "variantTypeValues": [
+        {
+          "Id": "1",
+          "LanguageISO": "DK",
+          "Title": "Sort",
+          "ProductVariantTypeId": "1",
+          "Sorting": "1",
+          "Color": "000000",
+          "Picture": null
+        },
+        {
+          "Id": "2",
+          "LanguageISO": "DK",
+          "Title": "Rød",
+          "ProductVariantTypeId": "1",
+          "Sorting": "2",
+          "Color": "FF0000",
+          "Picture": null
+        },
+        {
+          "Id": "3",
+          "LanguageISO": "DK",
+          "Title": "Grå",
+          "ProductVariantTypeId": "1",
+          "Sorting": "3",
+          "Color": "A1A1A1",
+          "Picture": null
+        },
+        {
+          "Id": "6",
+          "LanguageISO": "DK",
+          "Title": "Gul",
+          "ProductVariantTypeId": "1",
+          "Sorting": "4",
+          "Color": "FFFF00",
+          "Picture": null
+        },
+        {
+          "Id": "7",
+          "LanguageISO": "DK",
+          "Title": "Hvid",
+          "ProductVariantTypeId": "1",
+          "Sorting": "5",
+          "Color": "FFFFFF",
+          "Picture": null
+        }
+      ]
+    },
+    "discounts": {
+      "wsdlFieldCount": 24,
+      "wsdlFields": "Id,Title,Type,Value,Code,UseCount,ProductIds,DiscountCustomerAssociation,DiscountCustomerGroupAssociation,Limit,DateExpire,DateCreated,AmountSpent,AmountSpentPrecise,Vat,AllowDiscountedProducts,StartDate,IsActive,IsRestrictedToNewCustomer,MinimumCartValue,DiscountedProductCategories,IsSingleUsePerCustomer,DeliveryMethodIds,FreeGift",
+      "ok": true,
+      "fault": null,
+      "count": 0,
+      "audit": null,
+      "sample": []
+    },
+    "pages": {
+      "wsdlFieldCount": 20,
+      "setFieldsOk": true,
+      "setFieldsFault": null,
+      "enumerationOpsInWsdl": [
+        "PageText_GetByFolder",
+        "PageText_GetById",
+        "PageText_GetByIds",
+        "PageText_GetByLink"
+      ],
+      "noGetAllConfirmed": true,
+      "byFolder": [
+        {
+          "folderId": 0,
+          "ok": true,
+          "fault": null,
+          "count": 1,
+          "titles": []
+        },
+        {
+          "folderId": 1,
+          "ok": true,
+          "fault": null,
+          "count": 1,
+          "titles": []
+        },
+        {
+          "folderId": 2,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 3,
+          "ok": true,
+          "fault": null,
+          "count": 4,
+          "titles": [
+            "Om os",
+            "Kontakt",
+            "Handelsbetingelser",
+            "Cookies"
+          ]
+        },
+        {
+          "folderId": 4,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 5,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 6,
+          "ok": true,
+          "fault": null,
+          "count": 1,
+          "titles": [
+            "Nyheder"
+          ]
+        },
+        {
+          "folderId": 7,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 8,
+          "ok": true,
+          "fault": null,
+          "count": 1,
+          "titles": [
+            "Produktkatalog"
+          ]
+        },
+        {
+          "folderId": 9,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 10,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 11,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 12,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 13,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 14,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 15,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 16,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 17,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 18,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 19,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        },
+        {
+          "folderId": 20,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "titles": []
+        }
+      ],
+      "byIdsCount": 1,
+      "byIdsOk": true,
+      "byIdsFault": null,
+      "byIdsTitles": [],
+      "audit": {
+        "requested": [
+          "Id",
+          "CategoryId",
+          "Sorting",
+          "ParentId",
+          "ShowInMenu",
+          "Target",
+          "UpdatedDate",
+          "LanguageISO",
+          "Title",
+          "Headline",
+          "Link",
+          "Text",
+          "Text2",
+          "Text3",
+          "Visible",
+          "SeoKeywords",
+          "SeoDescription",
+          "SeoTitle",
+          "Pictures",
+          "LanguageAccess"
+        ],
+        "returned": [
+          "item",
+          "LanguageAccess"
+        ],
+        "missing": [
+          "Id",
+          "CategoryId",
+          "Sorting",
+          "ParentId",
+          "ShowInMenu",
+          "Target",
+          "UpdatedDate",
+          "LanguageISO",
+          "Title",
+          "Headline",
+          "Link",
+          "Text",
+          "Text2",
+          "Text3",
+          "Visible",
+          "SeoKeywords",
+          "SeoDescription",
+          "SeoTitle",
+          "Pictures"
+        ],
+        "sampleAvailable": true,
+        "truncated": true
+      },
+      "interpret": "If GetByFolder(0..n) enumerates, SOAP has a folder-walk path. If not, enumeration must come from GraphQL `pages`/`folders` (F12) or from an id sweep, and that is a documented scan cost."
+    },
+    "tagsAreReviews": {
+      "wsdlFieldCount": 9,
+      "wsdlFields": "Id,LanguageISO,Title,UserId,Username,UserEmail,Rating,Text,DateCreated",
+      "rowsFound": 0,
+      "hasRatingAndText": true,
+      "sample": [],
+      "perProduct": [
+        {
+          "productId": 1,
+          "ok": true,
+          "count": 0
+        },
+        {
+          "productId": 2,
+          "ok": true,
+          "count": 0
+        },
+        {
+          "productId": 3,
+          "ok": true,
+          "count": 0
+        },
+        {
+          "productId": 4,
+          "ok": true,
+          "count": 0
+        },
+        {
+          "productId": 5,
+          "ok": true,
+          "count": 0
+        },
+        {
+          "productId": 6,
+          "ok": true,
+          "count": 0
+        }
+      ],
+      "interpret": "The TYPE proves these are reviews (Rating/Text/UserEmail). A zero row count means this shop has no reviews, not that the entity is absent."
+    },
+    "customFields": {
+      "typesOk": true,
+      "types": [],
+      "perProduct": [
+        {
+          "productId": 1,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "sample": []
+        },
+        {
+          "productId": 2,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "sample": []
+        },
+        {
+          "productId": 3,
+          "ok": true,
+          "fault": null,
+          "count": 0,
+          "sample": []
+        }
+      ]
+    },
+    "orderGetByDate": {
+      "wsdlSignature": "Start, End, Status — all xsd:string nillable=true",
+      "tried": [
+        {
+          "label": "Status omitted",
+          "args": {
+            "Start": "2019-01-01 00:00:00",
+            "End": "2030-01-01 00:00:00"
+          },
+          "ok": true,
+          "fault": null,
+          "count": 20,
+          "ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ]
+        },
+        {
+          "label": "Status empty string",
+          "args": {
+            "Start": "2019-01-01 00:00:00",
+            "End": "2030-01-01 00:00:00",
+            "Status": ""
+          },
+          "ok": true,
+          "fault": null,
+          "count": 20,
+          "ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20"
+          ]
+        },
+        {
+          "label": "Status 0",
+          "args": {
+            "Start": "2019-01-01 00:00:00",
+            "End": "2030-01-01 00:00:00",
+            "Status": "0"
+          },
+          "ok": true,
+          "fault": null,
+          "count": 19,
+          "ids": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "18",
+            "19",
+            "20"
+          ]
+        },
+        {
+          "label": "Status 99",
+          "args": {
+            "Start": "2019-01-01 00:00:00",
+            "End": "2030-01-01 00:00:00",
+            "Status": "99"
+          },
+          "ok": true,
+          "fault": null,
+          "count": 1,
+          "ids": [
+            "17"
+          ]
+        }
+      ],
+      "statusIsOptionalInPractice": true,
+      "omittingStatusReturnsEverything": true,
+      "interpret": "If omitting Status faults, a date-window export MUST loop every status id or it silently exports a subset. If it succeeds but returns fewer rows than the status-specific call, that is worse: a silent partial export."
+    },
+    "scale": {
+      "products": 618,
+      "productsFault": null,
+      "ordersPaginated": 20,
+      "wrongArgNamesBehaviour": "Receiver: SoapFault Receiver: Too few arguments to function WebService::Order_GetAllWithPagination(), 0 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 2 expected",
+      "wrongArgNamesLesson": "Unrecognised element names are silently dropped rather than rejected as NOSUCHPARAM — the server then complains about arity. Validate argument names against the WSDL, not just field names (R4's rule extends to arguments).",
+      "bound": "This shop is tiny. Nothing here bounds a 10k catalogue; R5 (nested inlining) is what makes that tractable, and it remains unmeasured at scale."
+    },
+    "htmlEntities": {
+      "responsesScanned": 69,
+      "opsWithFindings": [
+        {
+          "op": "Product_GetVariantTypeAll",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "Product_GetVariantTypeValuesByType",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "PageText_GetByFolder",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "PageText_GetByFolder",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "PageText_GetByFolder",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "PageText_GetByIds",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "Product_GetAllWithLimit",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "Payment_GetAll",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        },
+        {
+          "op": "OrderStatusCode_GetAll",
+          "entities": [],
+          "rawNonAsciiPresent": true,
+          "bothFormsInSameResponse": false
+        }
+      ],
+      "mixedEncodingResponses": [],
+      "interpret": "F2's mojibake detector matches /Ã[\\x80-\\xBF]/ and cannot see &oslash;. Any op listed under mixedEncodingResponses carries BOTH conventions, so the client needs a per-field entity-decode step, not a global one — decoding globally would corrupt any field that legitimately contains an ampersand sequence."
+    }
+  },
+  "faults": [
+    {
+      "ok": false,
+      "op": "Order_GetAllWithPagination",
+      "code": "Receiver",
+      "message": "SoapFault Receiver: Too few arguments to function WebService::Order_GetAllWithPagination(), 0 passed in /code/smartweb/latest/api/service.php on line 108 and exactly 2 expected",
+      "args": [
+        "Start",
+        "Length"
+      ]
+    }
+  ],
+  "verdict": "Probed 10 previously-unprobed areas. Faults: 1. customers=0 priceLines=0 variants=4 discounts=0 pagesById=1 reviews=0. No section failed outright.",
+  "interpret": "A zero count is a fact about THIS demo shop, not about the entity. Every section states its own bound; do not promote 'no rows' to 'no such feature'."
+}

@@ -1,0 +1,59 @@
+# --- secrets & per-client state (NEVER commit) ---
+.env
+.env.*
+!.env.example
+backup.env.txt
+config/migration.config.json
+config/sites.json
+
+# --- generated migration data (per-pair workspaces, ledgers, exports) ---
+# Ignore pair dumps, but keep the pinned offline-test probe artifacts tracked
+# (fresh clones must pass `npm test` without a live DanDomain shop).
+data/*
+!data/probes/
+data/probes/*
+!data/probes/README.md
+!data/probes/service.wsdl
+!data/probes/gaps.json
+!data/probes/scale.json
+!data/probes/gqlshapes.json
+!data/probes/pagebase.json
+!data/probes/completeness-blog.json
+# the suites create data-test-partial / -redirect-skip / -d1-command as well as data-test,
+# and only the bare name was ignored — so every run left untracked junk behind.
+data-test*
+test/tmp-*.config.json
+*.log
+
+# --- node ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.npm/
+*.tgz
+
+# --- shopify cli ---
+.shopify/
+
+# --- editors ---
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
+
+# --- os ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- local agent-client configs (contain account/device identifiers) ---
+claude_desktop_config.json
+
+# --- extra guards for a public repo ---
+_to_delete/
+*.orig
+backup*.env*
+data/mcp-calls.jsonl
+config/*.json
+!config/*.example.json

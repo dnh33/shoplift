@@ -1,0 +1,35 @@
+{
+  "name": "shoplift",
+  "version": "1.337.0",
+  "description": "SHOPLIFT — store extraction & relocation suite. WordPress (WooCommerce / EDD / content) to Shopify migration pipeline. Zero runtime dependencies, Node >= 20.",
+  "private": true,
+  "type": "module",
+  "bin": { "shoplift": "src/cli.js", "wp2shopify": "src/cli.js", "shoplift-mcp": "src/mcp-server.js" },
+  "engines": { "node": ">=20.0.0" },
+  "author": "Daniel Hjermitslev (https://www.danielhjermitslev.com/)",
+  "repository": { "type": "git", "url": "git+https://github.com/dnh33/shoplift.git" },
+  "bugs": { "url": "https://github.com/dnh33/shoplift/issues" },
+  "homepage": "https://github.com/dnh33/shoplift#readme",
+  "keywords": [
+    "shopify",
+    "wordpress",
+    "woocommerce",
+    "easy-digital-downloads",
+    "migration",
+    "etl",
+    "graphql-admin-api",
+    "cli",
+    "zero-dependencies"
+  ],
+  "scripts": {
+    "start": "node src/cli.js",
+    "export": "node src/cli.js export",
+    "transform": "node src/cli.js transform",
+    "import": "node src/cli.js import",
+    "verify": "node src/cli.js verify",
+    "doctor": "node src/cli.js doctor",
+    "all": "node src/cli.js all",
+    "test": "node test/run-fixtures.js && node test/run-import-sim.js && node test/run-machine.js && node test/run-mcp.js && node test/run-dandomain.mjs && node scripts/probe-dandomain.test.mjs"
+  },
+  "license": "MIT"
+}

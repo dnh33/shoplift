@@ -1,0 +1,9 @@
+# Everything is owned by the author until someone else is onboarded.
+* @dnh33
+
+# The invariants live in these files. Changes here are architecture decisions,
+# not edits — see ARCHITECTURE.md §Invariants.
+/ARCHITECTURE.md      @dnh33
+/PLAYBOOK.md          @dnh33
+/src/shopify/         @dnh33
+/src/import/          @dnh33

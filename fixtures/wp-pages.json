@@ -1,0 +1,11 @@
+[
+  {
+    "id": 3001,
+    "slug": "om-os",
+    "link": "https://www.example-shop.com/om-os/",
+    "status": "publish",
+    "title": { "rendered": "Om os" },
+    "content": { "rendered": "<p>Vi er et lille dansk værksted.</p>" },
+    "yoast_head_json": { "title": "Om os – Example Shop", "description": "Historien bag Example Shop." }
+  }
+]

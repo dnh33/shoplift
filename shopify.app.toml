@@ -1,0 +1,32 @@
+# shopify.app.toml — config-as-code for SHOPLIFT's importer app.
+#
+# Lets Shopify CLI create/update the app (incl. exact scopes) in your
+# organization instead of clicking through the Dev Dashboard:
+#
+#   npm install -g @shopify/cli@latest
+#   shopify app deploy        # run in the repo root; log in; choose
+#                             # "create as new app" on first run
+#
+# `shopify app deploy` writes the generated client_id back into this file.
+# Afterwards, in the Dev Dashboard (dev.shopify.com): install the app on the
+# target store and copy Client ID + Secret from the app's Settings page into
+# .env (SHOPIFY_CLIENT_ID / SHOPIFY_CLIENT_SECRET). The pipeline mints access
+# tokens automatically via the client credentials grant.
+
+# Deliberately still the pre-rename name: this is the app's identity in the
+# Shopify organization, and changing it renames the app on the next
+# `shopify app deploy` for every store it is already installed on.
+name = "wp2shopify-importer"
+embedded = false
+
+# This app has no UI — the URL is a required placeholder, never visited.
+application_url = "https://localhost"
+
+[access_scopes]
+scopes = "write_products,write_customers,write_orders,write_discounts,write_content,write_files,write_inventory,read_locations,read_publications,write_publications"
+
+[auth]
+redirect_urls = ["https://localhost/auth/callback"]
+
+[webhooks]
+api_version = "2026-07"

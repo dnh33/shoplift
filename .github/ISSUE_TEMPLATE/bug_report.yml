@@ -1,0 +1,98 @@
+name: Bug report
+description: Something in the pipeline behaves incorrectly.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Never paste credentials.** Redact `ck_`/`cs_`/`shpat_` values, application
+        passwords, client secrets, and customer PII (emails, addresses, order notes)
+        out of anything you attach.
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Stage
+      options:
+        - export
+        - transform
+        - import
+        - verify
+        - doctor
+        - seed
+        - wipe
+        - sites / menu (interactive)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: entity
+    attributes:
+      label: Entity (if the stage is entity-scoped)
+      options:
+        - 'n/a'
+        - products
+        - collections
+        - customers
+        - orders
+        - discounts
+        - pages
+        - articles
+        - redirects
+
+  - type: input
+    id: source
+    attributes:
+      label: Source adapter
+      placeholder: woocommerce | edd | fixture
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened vs. what should have happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Command and reproduction steps
+      render: shell
+      placeholder: node src/cli.js import --entities orders --verbose
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: >
+        Relevant lines from `data/transformed/warnings.jsonl`,
+        `data/state/failed-*.jsonl` (Shopify `userErrors` land here), or
+        `data/verify-report.json`. Redact first.
+      render: text
+
+  - type: input
+    id: env
+    attributes:
+      label: Node version and OS
+      placeholder: node v20.11.0 / Windows 11
+    validations:
+      required: true
+
+  - type: input
+    id: apiversion
+    attributes:
+      label: Shopify API version in the active config
+      placeholder: '2026-07'
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before filing
+      options:
+        - label: '`npm test` passes locally (offline suite, no store needed)'
+        - label: '`node src/cli.js doctor` passes, or its failure is the bug'
+        - label: I checked `warnings.jsonl` — this is not a flagged-and-expected mapping decision

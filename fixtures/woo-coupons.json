@@ -1,0 +1,5 @@
+[
+  { "id": 701, "code": "VELKOMMEN10", "discount_type": "percent", "amount": "10", "date_created_gmt": "2025-01-10T08:00:00", "date_expires": null, "usage_limit": null, "usage_limit_per_user": 1, "minimum_amount": "100.00", "product_ids": [], "product_categories": [] },
+  { "id": 702, "code": "SOMMER50", "discount_type": "fixed_cart", "amount": "50", "date_created_gmt": "2024-06-01T08:00:00", "date_expires": "2024-08-31T23:59:59", "usage_limit": 100, "usage_limit_per_user": null, "minimum_amount": "0.00", "product_ids": [], "product_categories": [] },
+  { "id": 703, "code": "KOP25", "discount_type": "fixed_product", "amount": "25", "date_created_gmt": "2025-05-01T08:00:00", "date_expires": null, "usage_limit": null, "usage_limit_per_user": null, "minimum_amount": "0.00", "product_ids": [101], "product_categories": [] }
+]
