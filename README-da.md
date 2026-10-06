@@ -19,7 +19,7 @@
 
 SHOPLIFT kr&aelig;ver Node.js version 20 eller senere. Det har **ingen runtime-afh&aelig;ngigheder**. Det bruger Shopify **GraphQL Admin API** til alle operationer (REST Admin API er legacy). Agencies kan bruge SHOPLIFT til gentagne kundeopgaver: en konfigurationsfil pr. kunde, genoptagbare k&oslash;rsler og en revisionslog. SHOPLIFT migrerer data fra WooCommerce, Easy Digital Downloads og WordPress-indl&aelig;g og -sider.
 
-|  |  |
+| Dokument | Hvad det d&aelig;kker |
 |---|---|
 | **[SETUP.md](SETUP.md)** | Kold start uden den interaktive menu: `.env`, profilregistrering, paraktivering og de kontroller der skal best&aring;s f&oslash;rst. Skrevet til en AI-agent. |
 | **[PLAYBOOK.md](PLAYBOOK.md)** | Migreringsforl&oslash;bet: scoping, butikops&aelig;tning, SEO, go-live og de opgaver som automatisering ikke kan udf&oslash;re. |
@@ -151,7 +151,7 @@ fixtures/ + test/        offline test-suites, ingen butik krævet: npm test
 
 SHOPLIFT needs Node.js version 20 or later. It has **zero runtime dependencies**. It uses the Shopify **GraphQL Admin API** for all operations (the REST Admin API is legacy). Agencies can use SHOPLIFT for repeated client work: one config file per client, resumable runs, and an audit trail. SHOPLIFT migrates data from WooCommerce, from Easy Digital Downloads, and from WordPress posts and pages.
 
-| | |
+| Document | What it covers |
 |---|---|
 | **[SETUP.md](SETUP.md)** | Cold start without the interactive menu: `.env`, profile registration, pair activation, and the checks to pass first. Written for an AI agent. |
 | **[PLAYBOOK.md](PLAYBOOK.md)** | The migration workflow: scoping, store setup, SEO, go-live, and the tasks that automation cannot do. |

@@ -19,7 +19,7 @@
 
 SHOPLIFT needs Node.js version 20 or later. It has **zero runtime dependencies**. It uses the Shopify **GraphQL Admin API** for all operations (the REST Admin API is legacy). Agencies can use SHOPLIFT for repeated client work: one config file per client, resumable runs, and an audit trail. SHOPLIFT migrates data from WooCommerce, from Easy Digital Downloads, and from WordPress posts and pages.
 
-| | |
+| Document | What it covers |
 |---|---|
 | **[SETUP.md](SETUP.md)** | Cold start without the interactive menu: `.env`, profile registration, pair activation, and the checks to pass first. Written for an AI agent. |
 | **[PLAYBOOK.md](PLAYBOOK.md)** | The migration workflow: scoping, store setup, SEO, go-live, and the tasks that automation cannot do. |
